@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Anudeep Portfolio",
+  "name": "Anudeep Muktinutalapati",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "https://user-images.githubusercontent.com/85919501/129469630-4cd52c1c-10e0-4df7-8da0-5c8e72a0dfce.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "https://user-images.githubusercontent.com/85919501/129469630-4cd52c1c-10e0-4df7-8da0-5c8e72a0dfce.png",
       "type": "image/png",
       "sizes": "512x512"
     }

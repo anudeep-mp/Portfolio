@@ -1,24 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useRef } from "react";
+import "./App.css";
+import NavBar from "./components/Navbar/NavBar";
+import About from "./pages/About/About";
+import Career from "./pages/Intro/Career";
+import Contact from "./pages/Contact/Contact";
+import Intro from "./pages/Intro/Intro";
+import Projects from "./pages/Projects/Projects";
+import Skills from "./pages/Skills/Skills";
+import { IPageRefs } from "./common/interfaces";
 
 function App() {
+  const refs: IPageRefs = {
+    introRef: useRef<HTMLElement>(null),
+    aboutRef: useRef<HTMLElement>(null),
+    careerRef: useRef<HTMLElement>(null),
+    skillsRef: useRef<HTMLElement>(null),
+    projectsRef: useRef<HTMLElement>(null),
+    contactRef: useRef<HTMLElement>(null),
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar refs={refs} />
+      <section ref={refs.introRef}>
+        <Intro />
+      </section>
+      <section ref={refs.aboutRef}>
+        <About />
+      </section>
+      <section ref={refs.careerRef}>
+        <Career />
+      </section>
+      <section ref={refs.skillsRef}>
+        <Skills />
+      </section>
+      <section ref={refs.projectsRef}>
+        <Projects />
+      </section>
+      <section ref={refs.contactRef}>
+        <Contact />
+      </section>
     </div>
   );
 }
