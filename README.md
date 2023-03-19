@@ -1,3 +1,3 @@
 Anudeep Muktinutalapati Portfolio
 
-https://anudeep-m.netlify.app
+https://anufolio-2point0.netlify.app/
