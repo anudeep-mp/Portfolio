@@ -3,17 +3,17 @@
   "name": "Anudeep Muktinutalapati",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./favicon/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "https://user-images.githubusercontent.com/85919501/129469630-4cd52c1c-10e0-4df7-8da0-5c8e72a0dfce.png",
+      "src": "./favicon/logo-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://user-images.githubusercontent.com/85919501/129469630-4cd52c1c-10e0-4df7-8da0-5c8e72a0dfce.png",
+      "src": "./favicon/logo-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -1,4 +1,5 @@
 import { RefObject, useState } from "react";
+
 import { ImageBase64URLs } from "../../assets/ImageBase64URLs";
 import { IPageRefs } from "../../common/interfaces";
 import "./navbar.css";
@@ -55,9 +56,6 @@ export default function NavBar(props: INavBarProps) {
           />
         </div>
         <ul className="links">
-          <li className="link active" onClick={() => handleScroll(introRef)}>
-            Home
-          </li>
           <li className="link" onClick={() => handleScroll(aboutRef)}>
             About
           </li>
