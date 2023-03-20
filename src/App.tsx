@@ -2,7 +2,7 @@ import { useRef } from "react";
 import "./App.css";
 import NavBar from "./components/Navbar/NavBar";
 import About from "./pages/About/About";
-import Career from "./pages/Intro/Career";
+import Career from "./pages/Career/Career";
 import Contact from "./pages/Contact/Contact";
 import Intro from "./pages/Intro/Intro";
 import Projects from "./pages/Projects/Projects";
