@@ -37,7 +37,7 @@
 }
 
 .navbar .links .link:hover {
-  color: #dabbff;
+  color: var(--primary-color);
 }
 
 .navbar .nav-links-collapsable-container {

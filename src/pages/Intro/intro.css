@@ -37,14 +37,12 @@
 .intro .heading-hi {
   font-size: 1.75rem;
   font-weight: 500;
-  margin: 0.4rem 0;
   color: var(--secondary-color);
 }
 
 .intro .heading-name {
   font-size: 4.5rem;
   font-weight: 500;
-  margin: 0.4rem 0;
   color: var(--primary-color);
   text-shadow: 1px 3px 15px var(--primary-color);
   letter-spacing: 3px;
@@ -52,8 +50,13 @@
 
 .intro .heading-desc {
   font-size: 1.75rem;
-  margin: 0.4rem 0;
   color: var(--secondary-color);
+}
+
+.intro .heading-hi,
+.intro .heading-name,
+.intro .heading-desc {
+  margin: 0.5rem 0;
 }
 
 @media (max-width: 800px) {
