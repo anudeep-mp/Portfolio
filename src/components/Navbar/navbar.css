@@ -43,7 +43,7 @@
 .navbar .nav-links-collapsable-container {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   flex-direction: column;
 }
 
@@ -91,7 +91,7 @@
 
   .navbar .nav-links-collapsable-container.active .links {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     flex-direction: column;
   }
 
