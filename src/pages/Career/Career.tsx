@@ -55,7 +55,7 @@ export default function Career() {
                     <a href={item.orgLink} target="_blank" className="org-name">
                       {item.orgName}
                     </a>
-                    <div className="org-tenure">{item.orgName}</div>
+                    <div className="org-tenure">{item.orgTenure}</div>
                   </div>
                 </div>
               </li>
