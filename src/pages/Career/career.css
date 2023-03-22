@@ -5,8 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 3rem;
   color: var(--secondary-color);
+  margin: 2rem 0;
 }
 
 .section.career .step-progress {
@@ -79,5 +79,6 @@
 @media (max-width: 750px) {
   .section.career .content {
     align-items: flex-start;
+    margin-left: 3rem;
   }
 }
