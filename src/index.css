@@ -40,14 +40,19 @@ body::-webkit-scrollbar-thumb {
   line-height: 1em;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   font-size: 16px;
-  --primary-color: #E63329;
+  --primary-color: #e63329;
   --secondary-color: #f8eaea;
   --ternery-color: rgb(255, 122, 122);
   --nav-background-color: #181818;
   --main-background-color: #000000;
-  --text-color: #ffffff;
+  --text-color1-white: #ffffff;
+  --text-color2-gold: #e5b582;
   --break-line-gradient-color1: var(--primary-color);
   --break-line-gradient-color2: transparent;
 }
