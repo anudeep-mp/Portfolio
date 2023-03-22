@@ -1,14 +1,15 @@
 import { useRef } from "react";
-import "./App.css";
-import NavBar from "./components/Navbar/NavBar";
+
+import { IPageRefs } from "./common/interfaces";
 import About from "./pages/About/About";
 import Career from "./pages/Career/Career";
 import Contact from "./pages/Contact/Contact";
 import Intro from "./pages/Intro/Intro";
 import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skills";
-import { IPageRefs } from "./common/interfaces";
 import SideNav from "./components/SideNav/SideNav";
+
+import "./App.css";
 
 function App() {
   const refs: IPageRefs = {
@@ -22,7 +23,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <NavBar refs={refs} /> */}
       <div className="side-nav-container">
         <SideNav refs={refs} />
       </div>

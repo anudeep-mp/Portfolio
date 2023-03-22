@@ -5,7 +5,7 @@ export default function Divider() {
       style={{
         width: "100%",
         height: "1px",
-        background: "linear-gradient(90deg, var(--primary-color), transparent)",
+        background: "linear-gradient(90deg, var(--break-line-gradient-color1), var(--break-line-gradient-color2))",
       }}
     />
   );

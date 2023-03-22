@@ -1,5 +1,5 @@
 import { IPageRefs } from "../../common/interfaces";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/logo-nb.png";
 import "./sidenav.css";
 import Divider from "../Divider";
 import { handleScroll } from "../../common/utils/utilities";

@@ -1,6 +1,6 @@
 import "./intro.css";
 
-import IntroImg from "../../assets/images/intro.png";
+import IntroImg from "../../assets/images/intro-nobg.png";
 
 export default function Intro() {
   return (

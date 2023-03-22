@@ -10,7 +10,6 @@ export default function About({contactRef} : {contactRef: RefObject<HTMLElement>
         <div className="content">
           I'm a software developer interested in frontend spectrum. I stitch
           effective designs with data to create dynamic user experiences.
-          <br />
           Despite starting out as a mechanical engineer, I quickly realized that
           my true calling lay in the realm of software engineering. Fueled by a
           genuine passion for coding and a desire to constantly improve my
