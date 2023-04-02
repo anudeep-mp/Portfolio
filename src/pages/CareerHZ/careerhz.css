@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: row;
   width: auto;
-  margin: 4rem 0 2rem;
+  margin: 5rem 0 2rem;
 }
 
 .section.careerhz .wrapper::before,
@@ -57,6 +57,7 @@
   padding: 2rem;
   position: relative;
   min-width: 20rem;
+  max-height: 10rem;
 }
 
 .section.careerhz .org-detail {
