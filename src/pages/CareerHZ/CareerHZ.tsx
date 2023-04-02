@@ -76,72 +76,77 @@ export default function CareerHZ() {
   return (
     <div className="section careerhz">
       <div className="title">Career</div>
-      <div className="wrapper">
-        <div className="container" ref={containerRef}>
-          <div className="content">
-            <ul className="step-progress">
-              {carrerData.reverse().map((item) => {
-                return (
-                  <li key={item.id} className="step-progress-item">
-                    <div className="step-progress-item-content">
-                      <div
-                        className="background-image-container"
-                        style={{ backgroundImage: `url(${item.orgBGLogo})` }}
-                      />
-                      <img src={item.orgLogo} className="org-detail org-logo" />
-                      <div>
-                        <div className="org-detail org-position">
-                          <img
-                            src={PositionImage}
-                            className="org-position-image"
-                          />
-                          {item.orgPosition}
-                        </div>
-                        <a
-                          href={item.orgLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="org-detail org-name"
-                        >
-                          <img
-                            src={OrganisationImage}
-                            className="org-position-image"
-                          />
-                          {item.orgName}
-                        </a>
-                        <div className="org-detail org-location">
-                          <img
-                            src={LocationImage}
-                            className="org-position-image"
-                          />
-                          {item.location}
-                        </div>
-                        <div className="org-detail org-tenure">
-                          <img
-                            src={TenureImage}
-                            className="org-position-image"
-                          />
-                          {item.orgTenure}
+      <div className="body-wrapper">
+        <div className="wrapper">
+          <div className="container" ref={containerRef}>
+            <div className="content">
+              <ul className="step-progress">
+                {carrerData.reverse().map((item) => {
+                  return (
+                    <li key={item.id} className="step-progress-item">
+                      <div className="step-progress-item-content">
+                        <div
+                          className="background-image-container"
+                          style={{ backgroundImage: `url(${item.orgBGLogo})` }}
+                        />
+                        <img
+                          src={item.orgLogo}
+                          className="org-detail org-logo"
+                        />
+                        <div>
+                          <div className="org-detail org-position">
+                            <img
+                              src={PositionImage}
+                              className="org-position-image"
+                            />
+                            {item.orgPosition}
+                          </div>
+                          <a
+                            href={item.orgLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="org-detail org-name"
+                          >
+                            <img
+                              src={OrganisationImage}
+                              className="org-position-image"
+                            />
+                            {item.orgName}
+                          </a>
+                          <div className="org-detail org-location">
+                            <img
+                              src={LocationImage}
+                              className="org-position-image"
+                            />
+                            {item.location}
+                          </div>
+                          <div className="org-detail org-tenure">
+                            <img
+                              src={TenureImage}
+                              className="org-position-image"
+                            />
+                            {item.orgTenure}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="scroll-buttons">
-          <img
-            src={LeftArrow}
-            onClick={scrollLeft}
-            className="scroll-button left"
-          />
-          <img
-            src={RightArrow}
-            onClick={scrollRight}
-            className="scroll-button right"
-          />
+          <div className="scroll-buttons">
+            <img
+              src={LeftArrow}
+              onClick={scrollLeft}
+              className="scroll-button left"
+            />
+            <img
+              src={RightArrow}
+              onClick={scrollRight}
+              className="scroll-button right"
+            />
+          </div>
         </div>
       </div>
     </div>
