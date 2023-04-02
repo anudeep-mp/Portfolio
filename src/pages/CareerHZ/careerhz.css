@@ -79,6 +79,8 @@
   justify-content: center;
   width: fit-content;
   margin: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .section.careerhz .org-detail .org-position-image {
@@ -90,12 +92,9 @@
   color: var(--ternery-color);
 }
 
-.section.careerhz .org-name:hover {
-  color: var(--primary-color);
-}
-
+.section.careerhz .org-name:hover,
 .section.careerhz .org-tenure {
-  color: var(--text-color2-gold);
+  color: var(--primary-color);
 }
 
 .section.careerhz .org-logo {
@@ -106,6 +105,6 @@
   z-index: 1;
   background-color: var(--main-background-color);
   padding: 3px;
-  left : 5rem;
-  top : -2rem;
+  left: 5rem;
+  top: -2rem;
 }
