@@ -10,11 +10,13 @@ import Skills from "./pages/Skills/Skills";
 import SideNav from "./components/SideNav/SideNav";
 
 import "./App.css";
+import CareerHZ from "./pages/CareerHZ/CareerHZ";
 
 function App() {
   const refs: IPageRefs = {
     introRef: useRef<HTMLElement>(null),
     aboutRef: useRef<HTMLElement>(null),
+    careerHZRef: useRef<HTMLElement>(null),
     careerRef: useRef<HTMLElement>(null),
     skillsRef: useRef<HTMLElement>(null),
     projectsRef: useRef<HTMLElement>(null),
@@ -32,6 +34,9 @@ function App() {
         </section>
         <section ref={refs.aboutRef}>
           <About contactRef={refs.contactRef}/>
+        </section>
+        <section ref={refs.careerHZRef}>
+          <CareerHZ />
         </section>
         <section ref={refs.careerRef}>
           <Career />

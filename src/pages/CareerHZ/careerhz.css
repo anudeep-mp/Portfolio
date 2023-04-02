@@ -1,0 +1,92 @@
+.section.careerhz .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.section.careerhz .container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.section.careerhz .container .content {
+  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  margin: 4rem 0 2rem;
+}
+
+.section.careerhz .wrapper::before,
+.section.careerhz .wrapper::after {
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    var(--break-line-gradient-color1),
+    var(--break-line-gradient-color2)
+  );
+}
+
+.section.careerhz .step-progress {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.section.careerhz .step-progress-item::before {
+  content: "";
+  position: absolute;
+  left: 7rem;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color2-gold);
+}
+
+.section.careerhz .step-progress-item:last-child::before {
+  display: none;
+}
+
+.section.careerhz .step-progress-item {
+  padding: 2rem;
+  position: relative;
+  min-width: 20rem;
+}
+
+.section.careerhz .org-detail {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 1rem;
+}
+
+.section.careerhz .org-name {
+  color: var(--ternery-color);
+}
+
+.section.careerhz .org-name:hover {
+  color: var(--primary-color);
+}
+
+.section.careerhz .org-tenure {
+  color: var(--text-color2-gold);
+}
+
+.section.careerhz .org-logo {
+  width: 3.5rem;
+  height: fit-content;
+  margin-top: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--main-background-color);
+  padding: 3px;
+  border-radius: 40%;
+  left : 5rem;
+  top : -2rem;
+}

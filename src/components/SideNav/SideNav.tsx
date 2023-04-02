@@ -9,7 +9,7 @@ interface INavBarProps {
 }
 
 export default function SideNav(props: INavBarProps) {
-  const { introRef, aboutRef, careerRef, skillsRef, projectsRef, contactRef } =
+  const { introRef, aboutRef, careerHZRef, careerRef, skillsRef, projectsRef, contactRef } =
     props.refs;
 
   return (
@@ -27,6 +27,10 @@ export default function SideNav(props: INavBarProps) {
         <Divider />
         <div className="side-nav-item" onClick={() => handleScroll(aboutRef)}>
           About
+        </div>
+        <Divider />
+        <div className="side-nav-item" onClick={() => handleScroll(careerHZRef)}>
+          CareerHZ
         </div>
         <Divider />
         <div className="side-nav-item" onClick={() => handleScroll(careerRef)}>
