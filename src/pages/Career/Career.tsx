@@ -1,4 +1,4 @@
-import OneBancLogo from "../../assets/images/onebanc-logo.webp";
+import OneBancLogo from "../../assets/images/onebanc-logo.png";
 import SpcLogo from "../../assets/images/spc-logo.png";
 import VitLogo from "../../assets/images/vit-logo.png";
 

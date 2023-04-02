@@ -1,6 +1,9 @@
-import OneBancLogo from "../../assets/images/onebanc-logo.webp";
+import OneBancLogo from "../../assets/images/onebanc-logo.png";
 import SpcLogo from "../../assets/images/spc-logo.png";
 import VitLogo from "../../assets/images/vit-logo.png";
+import VitBGLogo from "../../assets/images/vit-logo-bg.png";
+import OneBancBGLogo from "../../assets/images/onebanc-logo.png";
+import SpcBGLogo from "../../assets/images/spc-logo.png";
 
 import "./careerhz.css";
 
@@ -9,6 +12,7 @@ export default function CareerHZ() {
     {
       id: 1,
       orgLogo: VitLogo,
+      orgBGLogo: VitBGLogo,
       orgName: "Vellore Institute of Technology",
       orgPosition: "Bachelor of Technology",
       orgTenure: "July 2017 - June 2021",
@@ -17,6 +21,7 @@ export default function CareerHZ() {
     {
       id: 2,
       orgLogo: OneBancLogo,
+      orgBGLogo: OneBancBGLogo,
       orgName: "OneBanc Technologies",
       orgPosition: "Associate Frontend Developer",
       orgTenure: "Oct 2021 - Feb 2022",
@@ -25,6 +30,7 @@ export default function CareerHZ() {
     {
       id: 3,
       orgLogo: OneBancLogo,
+      orgBGLogo: OneBancBGLogo,
       orgName: "OneBanc Technologies",
       orgPosition: "Frontend Developer",
       orgTenure: "Feb 2022 - June 2022",
@@ -33,6 +39,7 @@ export default function CareerHZ() {
     {
       id: 4,
       orgLogo: SpcLogo,
+      orgBGLogo: SpcBGLogo,
       orgName: "SkyPoint Cloud",
       orgPosition: "Software Development Engineer - I",
       orgTenure: "June 2022 - Present",
@@ -51,8 +58,8 @@ export default function CareerHZ() {
                 return (
                   <li key={item.id} className="step-progress-item">
                     <div className="step-progress-item-content">
+                      <div className="background-image-container"  style={{backgroundImage: `url(${item.orgBGLogo})`}}/>
                       <img src={item.orgLogo} className="org-detail org-logo" />
-
                       <div>
                         <div className="org-detail org-position">
                           {item.orgPosition}
