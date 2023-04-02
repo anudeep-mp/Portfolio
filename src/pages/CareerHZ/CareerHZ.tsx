@@ -4,6 +4,10 @@ import VitLogo from "../../assets/images/vit-logo.png";
 import VitBGLogo from "../../assets/images/vit-logo-bg.png";
 import OneBancBGLogo from "../../assets/images/onebanc-logo.png";
 import SpcBGLogo from "../../assets/images/spc-logo.png";
+import PositionImage from "../../assets/images/position.png"
+import LocationImage from "../../assets/images/location.png"
+import OrganisationImage from "../../assets/images/organisation.png"
+import TenureImage from "../../assets/images/tenure.png"
 
 import "./careerhz.css";
 
@@ -17,6 +21,7 @@ export default function CareerHZ() {
       orgPosition: "Bachelor of Technology",
       orgTenure: "July 2017 - June 2021",
       orgLink: "https://vit.ac.in",
+      location : "Vellore, Tamil Nadu"
     },
     {
       id: 2,
@@ -26,6 +31,7 @@ export default function CareerHZ() {
       orgPosition: "Associate Frontend Developer",
       orgTenure: "Oct 2021 - Feb 2022",
       orgLink: "https://onebanc.ai",
+      location: "Gurgaon, Haryana"
     },
     {
       id: 3,
@@ -35,6 +41,7 @@ export default function CareerHZ() {
       orgPosition: "Frontend Developer",
       orgTenure: "Feb 2022 - June 2022",
       orgLink: "https://onebanc.ai",
+      location: "Gurgaon, Haryana"
     },
     {
       id: 4,
@@ -44,6 +51,7 @@ export default function CareerHZ() {
       orgPosition: "Software Development Engineer - I",
       orgTenure: "June 2022 - Present",
       orgLink: "https://skypointcloud.com",
+      location: "Bangalore, Karnataka"
     },
   ];
 
@@ -54,7 +62,7 @@ export default function CareerHZ() {
         <div className="container">
           <div className="content">
             <ul className="step-progress">
-              {carrerData.map((item) => {
+              {carrerData.reverse().map((item) => {
                 return (
                   <li key={item.id} className="step-progress-item">
                     <div className="step-progress-item-content">
@@ -62,7 +70,7 @@ export default function CareerHZ() {
                       <img src={item.orgLogo} className="org-detail org-logo" />
                       <div>
                         <div className="org-detail org-position">
-                          {item.orgPosition}
+                          <img src={PositionImage} className="org-position-image" />{item.orgPosition}
                         </div>
                         <a
                           href={item.orgLink}
@@ -70,11 +78,15 @@ export default function CareerHZ() {
                           rel="noreferrer"
                           className="org-detail org-name"
                         >
-                          {item.orgName}
+                          <img src={OrganisationImage} className="org-position-image" />{item.orgName}
                         </a>
-                        <div className="org-detail org-tenure">
-                          {item.orgTenure}
+                        <div className="org-detail org-location">
+                        <img src={LocationImage} className="org-position-image" />{item.location}
                         </div>
+                        <div className="org-detail org-tenure">
+                        <img src={TenureImage} className="org-position-image" />{item.orgTenure}
+                        </div>
+
                       </div>
                     </div>
                   </li>

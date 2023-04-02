@@ -43,8 +43,8 @@
 .section.careerhz .step-progress-item {
   padding: 2rem;
   position: relative;
-  min-width: 21rem;
-  max-height: 10rem;
+  min-width: 23rem;
+  max-height: 12rem;
 }
 
 .section.careerhz .step-progress-item .background-image-container {
@@ -57,6 +57,7 @@
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.15;
+  z-index: -1;
 }
 
 .section.careerhz .step-progress-item::before {
@@ -75,9 +76,15 @@
 
 .section.careerhz .org-detail {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   width: fit-content;
   margin: 1rem;
+}
+
+.section.careerhz .org-detail .org-position-image {
+  height: 1rem;
+  margin-right: 4px;
 }
 
 .section.careerhz .org-name {
