@@ -8,10 +8,14 @@ import PositionImage from "../../assets/images/position.png";
 import LocationImage from "../../assets/images/location.png";
 import OrganisationImage from "../../assets/images/organisation.png";
 import TenureImage from "../../assets/images/tenure.png";
+import RightArrow from "../../assets/images/right-arrow.png";
+import LeftArrow from "../../assets/images/left-arrow.png";
 
 import "./careerhz.css";
+import { useRef } from "react";
 
 export default function CareerHZ() {
+  const containerRef = useRef<any>();
   const carrerData = [
     {
       id: 1,
@@ -55,11 +59,25 @@ export default function CareerHZ() {
     },
   ];
 
+  const scrollLeft = () => {
+    containerRef.current.scrollTo({
+      left: containerRef.current.scrollLeft - 100,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    containerRef.current.scrollTo({
+      left: containerRef.current.scrollLeft + 100,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="section careerhz">
       <div className="title">Career</div>
       <div className="wrapper">
-        <div className="container">
+        <div className="container" ref={containerRef}>
           <div className="content">
             <ul className="step-progress">
               {carrerData.reverse().map((item) => {
@@ -80,7 +98,7 @@ export default function CareerHZ() {
                           {item.orgPosition}
                         </div>
                         <a
-                          href={item.orgLink} 
+                          href={item.orgLink}
                           target="_blank"
                           rel="noreferrer"
                           className="org-detail org-name"
@@ -112,6 +130,18 @@ export default function CareerHZ() {
               })}
             </ul>
           </div>
+        </div>
+        <div className="scroll-buttons">
+          <img
+            src={LeftArrow}
+            onClick={scrollLeft}
+            className="scroll-button left"
+          />
+          <img
+            src={RightArrow}
+            onClick={scrollRight}
+            className="scroll-button right"
+          />
         </div>
       </div>
     </div>
