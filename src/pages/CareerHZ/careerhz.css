@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: row;
   width: auto;
-  margin: 5rem 0 2rem;
+  margin: 8rem 0 4rem;
   position: relative;
 }
 
@@ -119,13 +119,13 @@
   top: -2rem;
 }
 
-.section.careerhz .scroll-buttons{
+.section.careerhz .scroll-buttons {
   position: absolute;
-  right : 6rem;
+  right: 6rem;
   bottom: 1rem;
 }
 
-.section.careerhz .scroll-buttons .scroll-button{
+.section.careerhz .scroll-buttons .scroll-button {
   display: inline;
   width: 3rem;
   cursor: pointer;
