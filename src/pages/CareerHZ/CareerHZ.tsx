@@ -32,7 +32,7 @@ export default function CareerHZ() {
     setShowScrollButtons(
       contentRef?.current?.scrollWidth > contentRef?.current?.clientWidth
     );
-    setShowScrollButtons(true)
+    setShowScrollButtons(true);
   }, [contentRef?.current?.scrollWidth]);
 
   const carrerData: ICareerItem[] = [
