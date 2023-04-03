@@ -121,13 +121,20 @@
 
 .section.careerhz .scroll-buttons {
   position: absolute;
-  right: 6rem;
-  bottom: 1rem;
+  right: 6.5rem;
+  bottom: -1rem;
 }
 
 .section.careerhz .scroll-buttons .scroll-button {
   display: inline;
-  width: 3rem;
+  width: 2rem;
   cursor: pointer;
-  margin: 0 0.5rem;
+  margin: 0 0.3rem;
+  border : 1px solid var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--main-background-color);
+}
+
+.section.careerhz .scroll-buttons .scroll-button:hover {
+  background-color: var(--secondary-color);
 }

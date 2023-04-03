@@ -12,6 +12,17 @@ import LeftArrow from "../../assets/images/left-arrow.png";
 import "./careerhz.css";
 import { useEffect, useRef, useState } from "react";
 
+interface ICareerItem {
+  id: number;
+  orgLogo: string;
+  orgBGLogo: string;
+  orgName: string;
+  orgPosition: string;
+  orgTenure: string;
+  orgLink: string;
+  location: string;
+}
+
 export default function CareerHZ() {
   const containerRef = useRef<any>();
   const contentRef = useRef<any>();
@@ -21,9 +32,10 @@ export default function CareerHZ() {
     setShowScrollButtons(
       contentRef?.current?.scrollWidth > contentRef?.current?.clientWidth
     );
+    setShowScrollButtons(true)
   }, [contentRef?.current?.scrollWidth]);
 
-  const carrerData = [
+  const carrerData: ICareerItem[] = [
     {
       id: 1,
       orgLogo: VitLogo,

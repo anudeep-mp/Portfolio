@@ -1,6 +1,6 @@
 import { RefObject, useState } from "react";
 
-import { ImageBase64URLs } from "../../assets/ImageBase64URLs";
+import { ImageBase64URLs } from "../../assets/images/ImageBase64URLs";
 import Logo from "../../assets/images/logo.png";
 import { IPageRefs } from "../../common/interfaces";
 import { handleScroll } from "../../common/utils/utilities";
