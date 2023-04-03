@@ -13,10 +13,6 @@ body {
 }
 
 /* scroll bar css */
-*::-webkit-scrollbar {
-  width: 0px;
-}
-
 body::-webkit-scrollbar {
   width: 10px;
 }
@@ -25,7 +21,7 @@ body::-webkit-scrollbar-track {
   background: var(--nav-background-color);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #24123a;
+  background-color: var(--scroll-thumb-bg-color);
   border-radius: 6px;
   border: 3px solid var(--nav-background-color);
 }
@@ -52,10 +48,13 @@ a {
   --ternery-color: rgb(255, 122, 122);
   --nav-background-color: #181818;
   --main-background-color: #000000;
+  --mini-background-color: rgba(120, 98, 207, 0.329);
   --text-color1-white: #ffffff;
   --text-color2-gold: #e5b582;
   --break-line-gradient-color1: var(--primary-color);
   --break-line-gradient-color2: transparent;
+  --scroll-thumb-bg-color: #24123a;
+  --scroll-thumb-thickness: 4px;
 }
 
 @media (min-width: 0px) and (max-width: 510px) {

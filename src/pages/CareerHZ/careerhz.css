@@ -34,6 +34,16 @@
   display: flex;
 }
 
+.section.careerhz .scroll-container::-webkit-scrollbar {
+  height: var(--scroll-thumb-thickness);
+  color: var(--ternery-color);
+}
+
+.section.careerhz .scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-bg-color);
+  border-radius: 1rem;
+}
+
 .section.careerhz .step-progress {
   margin: 6rem 0 4rem;
   list-style: none;
@@ -128,5 +138,5 @@
 }
 
 .section.careerhz .scroll-buttons .scroll-button:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--mini-background-color);
 }
