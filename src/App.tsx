@@ -38,9 +38,9 @@ function App() {
         <section ref={refs.careerHZRef}>
           <CareerHZ />
         </section>
-        <section ref={refs.careerRef}>
+        {/* <section ref={refs.careerRef}>
           <Career />
-        </section>
+        </section> */}
         <section ref={refs.skillsRef}>
           <Skills />
         </section>

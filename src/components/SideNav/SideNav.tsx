@@ -30,13 +30,13 @@ export default function SideNav(props: INavBarProps) {
         </div>
         <Divider />
         <div className="side-nav-item" onClick={() => handleScroll(careerHZRef)}>
-          CareerHZ
-        </div>
-        <Divider />
-        <div className="side-nav-item" onClick={() => handleScroll(careerRef)}>
           Career
         </div>
         <Divider />
+        {/* <div className="side-nav-item" onClick={() => handleScroll(careerRef)}>
+          Career
+        </div>
+        <Divider /> */}
         <div className="side-nav-item" onClick={() => handleScroll(skillsRef)}>
           Skills
         </div>

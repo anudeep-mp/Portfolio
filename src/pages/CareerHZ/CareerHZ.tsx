@@ -24,16 +24,15 @@ interface ICareerItem {
 }
 
 export default function CareerHZ() {
-  const containerRef = useRef<any>();
-  const contentRef = useRef<any>();
+  const scrollContainerRef = useRef<HTMLDivElement>({} as HTMLDivElement);
   const [showScrollButtons, setShowScrollButtons] = useState<boolean>(false);
 
   useEffect(() => {
     setShowScrollButtons(
-      contentRef?.current?.scrollWidth > contentRef?.current?.clientWidth
+      scrollContainerRef?.current?.scrollWidth >
+        scrollContainerRef?.current?.clientWidth
     );
-    setShowScrollButtons(true);
-  }, [contentRef?.current?.scrollWidth]);
+  }, [scrollContainerRef?.current?.scrollWidth]);
 
   const carrerData: ICareerItem[] = [
     {
@@ -79,15 +78,15 @@ export default function CareerHZ() {
   ];
 
   const scrollLeft = () => {
-    containerRef.current.scrollTo({
-      left: containerRef.current.scrollLeft - 100,
+    scrollContainerRef.current.scrollTo({
+      left: scrollContainerRef.current.scrollLeft - 100,
       behavior: "smooth",
     });
   };
 
   const scrollRight = () => {
-    containerRef.current.scrollTo({
-      left: containerRef.current.scrollLeft + 100,
+    scrollContainerRef.current.scrollTo({
+      left: scrollContainerRef.current.scrollLeft + 100,
       behavior: "smooth",
     });
   };
@@ -95,64 +94,59 @@ export default function CareerHZ() {
   return (
     <div className="section careerhz">
       <div className="title">Career</div>
-      <div className="body-wrapper">
+      <div className="content">
         <div className="wrapper">
-          <div className="container" ref={containerRef}>
-            <div className="content" ref={contentRef}>
-              <ul className="step-progress">
-                {carrerData.reverse().map((item) => {
-                  return (
-                    <li key={item.id} className="step-progress-item">
-                      <div className="step-progress-item-content">
-                        <div
-                          className="background-image-container"
-                          style={{ backgroundImage: `url(${item.orgBGLogo})` }}
-                        />
-                        <img
-                          src={item.orgLogo}
-                          className="org-detail org-logo"
-                        />
-                        <div>
-                          <div className="org-detail org-position">
-                            <img
-                              src={PositionImage}
-                              className="org-position-image"
-                            />
-                            {item.orgPosition}
-                          </div>
-                          <a
-                            href={item.orgLink}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="org-detail org-name"
-                          >
-                            <img
-                              src={OrganisationImage}
-                              className="org-position-image"
-                            />
-                            {item.orgName}
-                          </a>
-                          <div className="org-detail org-location">
-                            <img
-                              src={LocationImage}
-                              className="org-position-image"
-                            />
-                            {item.location}
-                          </div>
-                          <div className="org-detail org-tenure">
-                            <img
-                              src={TenureImage}
-                              className="org-position-image"
-                            />
-                            {item.orgTenure}
-                          </div>
+          <div className="scroll-container" ref={scrollContainerRef}>
+            <ul className="step-progress">
+              {carrerData.reverse().map((item) => {
+                return (
+                  <li key={item.id} className="step-progress-item">
+                    <div className="step-progress-item-content">
+                      <div
+                        className="background-image-container"
+                        style={{ backgroundImage: `url(${item.orgBGLogo})` }}
+                      />
+                      <img src={item.orgLogo} className="org-detail org-logo" />
+                      <div>
+                        <div className="org-detail org-position">
+                          <img
+                            src={PositionImage}
+                            className="org-position-image"
+                          />
+                          {item.orgPosition}
+                        </div>
+                        <a
+                          href={item.orgLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="org-detail org-name"
+                        >
+                          <img
+                            src={OrganisationImage}
+                            className="org-position-image"
+                          />
+                          {item.orgName}
+                        </a>
+                        <div className="org-detail org-location">
+                          <img
+                            src={LocationImage}
+                            className="org-position-image"
+                          />
+                          {item.location}
+                        </div>
+                        <div className="org-detail org-tenure">
+                          <img
+                            src={TenureImage}
+                            className="org-position-image"
+                          />
+                          {item.orgTenure}
                         </div>
                       </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
           {showScrollButtons && (
             <div className="scroll-buttons">

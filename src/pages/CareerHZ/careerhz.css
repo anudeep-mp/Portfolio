@@ -1,4 +1,4 @@
-.section.careerhz .body-wrapper {
+.section.careerhz .content {
   height: 100%;
   width: 100%;
   display: flex;
@@ -16,20 +16,6 @@
   position: relative;
 }
 
-.section.careerhz .container {
-  overflow-x: auto;
-  width: 100%;
-}
-
-.section.careerhz .container .content {
-  line-height: 2rem;
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  margin: 6rem 0 4rem;
-  position: relative;
-}
-
 .section.careerhz .wrapper::before,
 .section.careerhz .wrapper::after {
   width: 100%;
@@ -42,7 +28,14 @@
   );
 }
 
+.section.careerhz .scroll-container {
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+}
+
 .section.careerhz .step-progress {
+  margin: 6rem 0 4rem;
   list-style: none;
   display: flex;
   justify-content: center;
