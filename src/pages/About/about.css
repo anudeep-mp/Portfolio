@@ -30,3 +30,11 @@
 .section.about .contact-link:hover {
   color: var(--primary-color);
 }
+
+
+
+@media (max-width: 750px) {
+  .section.about .container .content {
+    width: 70%;
+  }
+}

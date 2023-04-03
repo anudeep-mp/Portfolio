@@ -47,7 +47,6 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  padding-right: 5rem;
 }
 
 .section.careerhz .step-progress-item {
@@ -121,7 +120,7 @@
 
 .section.careerhz .scroll-buttons {
   position: absolute;
-  right: 6.5rem;
+  right: 1rem;
   bottom: -1rem;
 }
 
