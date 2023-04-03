@@ -2,8 +2,6 @@ import OneBancLogo from "../../assets/images/onebanc-logo.png";
 import SpcLogo from "../../assets/images/spc-logo.png";
 import VitLogo from "../../assets/images/vit-logo.png";
 import VitBGLogo from "../../assets/images/vit-logo-bg.png";
-import OneBancBGLogo from "../../assets/images/onebanc-logo.png";
-import SpcBGLogo from "../../assets/images/spc-logo.png";
 import PositionImage from "../../assets/images/position.png";
 import LocationImage from "../../assets/images/location.png";
 import OrganisationImage from "../../assets/images/organisation.png";
@@ -12,10 +10,19 @@ import RightArrow from "../../assets/images/right-arrow.png";
 import LeftArrow from "../../assets/images/left-arrow.png";
 
 import "./careerhz.css";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function CareerHZ() {
   const containerRef = useRef<any>();
+  const contentRef = useRef<any>();
+  const [showScrollButtons, setShowScrollButtons] = useState<boolean>(false);
+
+  useEffect(() => {
+    setShowScrollButtons(
+      contentRef?.current?.scrollWidth > contentRef?.current?.clientWidth
+    );
+  }, [contentRef?.current?.scrollWidth]);
+
   const carrerData = [
     {
       id: 1,
@@ -30,7 +37,7 @@ export default function CareerHZ() {
     {
       id: 2,
       orgLogo: OneBancLogo,
-      orgBGLogo: OneBancBGLogo,
+      orgBGLogo: OneBancLogo,
       orgName: "OneBanc Technologies",
       orgPosition: "Associate Frontend Developer",
       orgTenure: "Oct 2021 - Feb 2022",
@@ -40,7 +47,7 @@ export default function CareerHZ() {
     {
       id: 3,
       orgLogo: OneBancLogo,
-      orgBGLogo: OneBancBGLogo,
+      orgBGLogo: OneBancLogo,
       orgName: "OneBanc Technologies",
       orgPosition: "Frontend Developer",
       orgTenure: "Feb 2022 - June 2022",
@@ -50,7 +57,7 @@ export default function CareerHZ() {
     {
       id: 4,
       orgLogo: SpcLogo,
-      orgBGLogo: SpcBGLogo,
+      orgBGLogo: SpcLogo,
       orgName: "SkyPoint Cloud",
       orgPosition: "Software Development Engineer - I",
       orgTenure: "June 2022 - Present",
@@ -79,7 +86,7 @@ export default function CareerHZ() {
       <div className="body-wrapper">
         <div className="wrapper">
           <div className="container" ref={containerRef}>
-            <div className="content">
+            <div className="content" ref={contentRef}>
               <ul className="step-progress">
                 {carrerData.reverse().map((item) => {
                   return (
@@ -135,18 +142,20 @@ export default function CareerHZ() {
               </ul>
             </div>
           </div>
-          <div className="scroll-buttons">
-            <img
-              src={LeftArrow}
-              onClick={scrollLeft}
-              className="scroll-button left"
-            />
-            <img
-              src={RightArrow}
-              onClick={scrollRight}
-              className="scroll-button right"
-            />
-          </div>
+          {showScrollButtons && (
+            <div className="scroll-buttons">
+              <img
+                src={LeftArrow}
+                onClick={scrollLeft}
+                className="scroll-button left"
+              />
+              <img
+                src={RightArrow}
+                onClick={scrollRight}
+                className="scroll-button right"
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
