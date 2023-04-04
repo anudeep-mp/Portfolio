@@ -55,6 +55,11 @@ a {
   --break-line-gradient-color2: transparent;
   --scroll-thumb-bg-color: #24123a;
   --scroll-thumb-thickness: 4px;
+  --donut-block-1-color: #009fe3;
+  --donut-block-2-color: #367bc0;
+  --donut-block-3-color: #6b569b;
+  --donut-block-4-color: #a32f76;
+  --donut-block-5-color: #d70b52;
 }
 
 @media (min-width: 0px) and (max-width: 510px) {

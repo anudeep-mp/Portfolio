@@ -93,6 +93,7 @@
   margin: 1rem;
   position: relative;
   z-index: 2;
+  color: var(--secondary-color);
 }
 
 .section.careerhz .org-detail .org-position-image {
