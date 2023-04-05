@@ -63,6 +63,7 @@ export default function Skills() {
   };
 
   const handleSkillClickForTouchDevices = (skill: ISkill) => {
+    if (skill.id === selectedSkill?.id) return;
     if (isTouchDevice) {
       setSelectedSkill(null);
       let timerId: any;
