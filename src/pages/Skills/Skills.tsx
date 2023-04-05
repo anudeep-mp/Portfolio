@@ -64,15 +64,18 @@ export default function Skills() {
 
   const handleSkillClickForTouchDevices = (skill: ISkill) => {
     if (isTouchDevice) {
-      setSelectedSkill(skill);
+      setSelectedSkill(null);
+      let timerId: any;
+      timerId = setTimeout(() => {
+        setSelectedSkill(skill);
+        clearTimeout(timerId);
+      }, 1);
     }
   };
 
   const getSkillLevelInDegrees = (skillLevelPercentage: number): string => {
     const degree = skillLevelPercentage * 1.9 - 90;
-    setTimeout(() => {
-      currentSkillLevelInDegrees.current = `${degree}deg`;
-    }, 5000);
+    currentSkillLevelInDegrees.current = `${degree}deg`;
     return `${degree}deg`;
   };
 
