@@ -43,9 +43,11 @@
 
 .section.projects .projects-details .projects-list {
   list-style: none;
-  padding: 0;
+  padding: 2px;
   display: flex;
   flex-direction: row;
+  overflow-x: auto;
+  width: 100%;
 }
 
 .section.projects .projects-details .project-card {
