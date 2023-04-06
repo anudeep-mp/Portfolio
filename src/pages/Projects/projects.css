@@ -162,6 +162,7 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-evenly;
+    --content-box-height: 18rem;
   }
   .section.projects .project-monitor-box,
   .section.projects .wrapper,
