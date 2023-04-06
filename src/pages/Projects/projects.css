@@ -162,7 +162,8 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-evenly;
-    --content-box-height: 18rem;
+    --content-box-height: 24rem;
+    --content-box-width: calc(var(--content-box-height) * 1.5);
   }
   .section.projects .project-monitor-box,
   .section.projects .wrapper,
@@ -170,5 +171,14 @@
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+  .section.projects .project-monitor-image {
+    height:calc(var(--content-box-height) * 0.8);
+    width: calc(var(--content-box-width)*0.8);
+  }
+
+  .section.projects .project-image {
+    height: calc(var(--content-box-height) * 0.64);
+    width: calc(var(--content-box-width) * 0.77);
   }
 }
