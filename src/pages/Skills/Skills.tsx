@@ -76,7 +76,11 @@ export default function Skills() {
 
   const getSkillLevelInDegrees = (skillLevelPercentage: number): string => {
     const degree = skillLevelPercentage * 1.9 - 90;
-    currentSkillLevelInDegrees.current = `${degree}deg`;
+    let timer: any;
+    timer = setTimeout(() => {
+      currentSkillLevelInDegrees.current = `${degree}deg`;
+      clearTimeout(timer);
+    }, 1);
     return `${degree}deg`;
   };
 
