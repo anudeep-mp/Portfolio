@@ -7,7 +7,7 @@
   height: 100%;
   color: var(--secondary-color);
   --content-box-height: 22rem;
-  --content-box-width: calc(var(--content-box-height) * 3 / 2);
+  --content-box-width: calc(var(--content-box-height) * 1.5);
 }
 
 .section.projects .wrapper {
@@ -145,12 +145,12 @@
 
 .section.projects .project-monitor-image {
   height: var(--content-box-height);
-  width: 34rem;
+  width: var(--content-box-width);
 }
 
 .section.projects .project-image {
   height: calc(var(--content-box-height) * 0.8);
-  width: var(--content-box-width);
+  width: calc(var(--content-box-width) * 0.97);
   position: absolute;
   top: 1rem;
   left: 0.5rem;
