@@ -52,3 +52,18 @@ export interface IFixedSkill {
   startDate: string;
   endDate: string;
 }
+
+export interface IProject {
+  id: string;
+  title: string;
+  description: string;
+  techStack: string[];
+  projectLink: string;
+  githubLink: string;
+  image: string;
+  logo: string;
+}
+
+export interface IProjectDict {
+  [key: string]: IProject;
+}

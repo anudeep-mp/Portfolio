@@ -17,8 +17,18 @@ import ExpressIcon from "../../assets/images/express.png";
 import MongoDBIcon from "../../assets/images/mongo-db.png";
 import RestIcon from "../../assets/images/rest.png";
 import PythonIcon from "../../assets/images/python.png";
+import CubekartImage from "../../assets/images/cubekart.png";
+import CubekartLogo from "../../assets/images/cubekart-logo.png";
+import CubeMusicImage from "../../assets/images/cubemusic.png";
+import CubeMusicLogo from "../../assets/images/cube-music-logo.png";
+import CubeChatImage from "../../assets/images/cubechat.png";
+import CubeChatLogo from "../../assets/images/cube-chat-logo.png";
 
-import { ICareerItem, ISkillsDict } from "../../common/interfaces";
+import {
+  ICareerItem,
+  IProjectDict,
+  ISkillsDict,
+} from "../../common/interfaces";
 
 export const carrerData: ICareerItem[] = [
   {
@@ -250,3 +260,43 @@ export const skills: ISkillsDict = {
     endDate: "08/2021",
   },
 };
+
+export const projects: IProjectDict = {
+  cubekart: {
+    id: "cubekart",
+    title: "Cubekart",
+    githubLink: "https://github.com/anudeep-m/Cubekart",
+    projectLink: "https://cubekart.onrender.com/",
+    image: CubekartImage,
+    logo: CubekartLogo,
+    description:
+      "Cubekart is an online shopping platform that enables customers to purchase products through a web application. The platform offers various features such as adding items to a virtual cart, placing orders, and leaving reviews. Additionally, Cubekart features an admin management system, allowing administrators to add new products and manage orders.",
+    techStack: ["reactjs", "nodejs", "expressjs", "mongodb"],
+  },
+
+  cubemusic: {
+    id: "cube-music",
+    title: "Cube Music",
+    description:
+      "Cube Music is an online music streaming platform designed for playing songs. It offers various features for managing personal playlists, liked songs, adding songs to a queue, and creating albums. Additionally, Cube Music has an admin management system that enables administrators to add new albums.",
+    githubLink: "https://github.com/anudeep-m/Cube-music",
+    projectLink: "https://cube-music.onrender.com/",
+    image: CubeMusicImage,
+    logo: CubeMusicLogo,
+    techStack: ["reactjs", "nodejs", "expressjs", "mongodb"],
+  },
+
+  cubechat: {
+    id: "cube-chat",
+    title: "Cube Chat",
+    description:
+      "Cube Chat is a real-time chat platform that allows users to communicate with their friends. It offers various functionalities, such as discovering people on Cube Chat, connecting with friends, and engaging in real-time conversations.",
+    githubLink: "https://github.com/anudeep-m/Cube-chat",
+    projectLink: "https://cube-chat.onrender.com/",
+    image: CubeChatImage,
+    logo: CubeChatLogo,
+    techStack: ["reactjs", "nodejs", "expressjs", "mongodb", "websockets"],
+  },
+};
+
+export const defaultProjectKey = "cubekart";
