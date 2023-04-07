@@ -25,6 +25,7 @@
 .section.about .contact-link {
   color: var(--ternery-color);
   cursor: pointer;
+  display: inline;
 }
 
 .section.about .contact-link:hover {
