@@ -62,6 +62,7 @@ export interface IProject {
   githubLink: string;
   image: string;
   logo: string;
+  gif: string;
 }
 
 export interface IProjectDict {

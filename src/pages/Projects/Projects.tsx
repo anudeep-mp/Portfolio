@@ -5,6 +5,7 @@ import MonitorImage from "../../assets/images/monitor.png";
 import { IProject } from "../../common/interfaces";
 import NavigateIcon from "../../assets/images/navigate.png";
 import CodeIcon from "../../assets/images/code.png";
+import PlayIcon from "../../assets/images/play.png";
 
 import "./projects.css";
 
@@ -13,8 +14,15 @@ export default function Projects() {
     projects[defaultProjectKey]
   );
 
+  const [showGif, setShowGif] = useState<boolean>(false);
+
   const changeSelectedProject = (projectKey: string) => {
     setSelectedProject(projects[projectKey]);
+    setShowGif(false);
+  };
+
+  const playSelectedProjectGIF = () => {
+    setShowGif(true);
   };
 
   return (
@@ -78,7 +86,15 @@ export default function Projects() {
               alt="Monitor"
               className="project-monitor-image"
             />
-            <img src={selectedProject.image} className="project-image" />
+            <img
+              src={!showGif ? selectedProject.image : selectedProject?.gif}
+              className="project-image"
+            />
+            <img
+              src={PlayIcon}
+              className="play-icon"
+              onClick={playSelectedProjectGIF}
+            />
           </div>
         </div>
       </div>

@@ -23,6 +23,10 @@ import CubeMusicImage from "../../assets/images/cubemusic.png";
 import CubeMusicLogo from "../../assets/images/cube-music-logo.png";
 import CubeChatImage from "../../assets/images/cubechat.png";
 import CubeChatLogo from "../../assets/images/cube-chat-logo.png";
+import CubekartGif from "../../assets/images/cubekart.gif";
+import CubeMusicGif from "../../assets/images/cubemusic.gif";
+import CubeChatGif from "../../assets/images/cubechat.gif";
+
 
 import {
   ICareerItem,
@@ -269,6 +273,7 @@ export const projects: IProjectDict = {
     projectLink: "https://cubekart.onrender.com/",
     image: CubekartImage,
     logo: CubekartLogo,
+    gif: CubekartGif,
     description:
       "Cubekart is an online shopping platform that enables customers to purchase products through a web application. The platform offers various features such as adding items to a virtual cart, placing orders, and leaving reviews. Additionally, Cubekart features an admin management system, allowing administrators to add new products and manage orders.",
     techStack: ["reactjs", "nodejs", "expressjs", "mongodb"],
@@ -283,6 +288,7 @@ export const projects: IProjectDict = {
     projectLink: "https://cube-music.onrender.com/",
     image: CubeMusicImage,
     logo: CubeMusicLogo,
+    gif: CubeMusicGif,
     techStack: ["reactjs", "nodejs", "expressjs", "mongodb"],
   },
 
@@ -295,6 +301,7 @@ export const projects: IProjectDict = {
     projectLink: "https://cube-chat.onrender.com/",
     image: CubeChatImage,
     logo: CubeChatLogo,
+    gif: CubeChatGif,
     techStack: ["reactjs", "nodejs", "expressjs", "mongodb", "websockets"],
   },
 };

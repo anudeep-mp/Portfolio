@@ -159,8 +159,16 @@
   border-radius: 5px;
 }
 
-.section.projects .project-monitor-image,
-.section.projects .project-image {
+.section.projects .play-icon {
+    position: absolute;
+    height: 2rem;
+    right : 5%;
+    bottom : 5%;
+    cursor: pointer;
+}
+
+.section.projects .play-icon:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 750px) {
