@@ -72,14 +72,14 @@ export interface IProjectDict {
 export interface IContactLink {
   id: string;
   label: string;
-  value: string;
+  socialId: string;
   link: string;
   icon: string;
 }
 export interface ISocialLink {
   id: string;
   label: string;
-  value: string;
+  socialId: string;
   link: string;
   icon: string;
 }
