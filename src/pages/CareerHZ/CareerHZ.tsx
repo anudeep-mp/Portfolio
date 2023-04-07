@@ -41,7 +41,7 @@ export default function CareerHZ() {
         <div className="wrapper">
           <div className="scroll-container" ref={scrollContainerRef}>
             <ul className="step-progress">
-              {carrerData.reverse().map((item) => {
+              {carrerData.sort((a, b) => b.id - a.id).map((item) => {
                 return (
                   <li key={item.id} className="step-progress-item">
                     <div className="step-progress-item-content">
