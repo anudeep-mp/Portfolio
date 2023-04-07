@@ -1,6 +1,9 @@
 import { RefObject, useState } from "react";
-import { ImageBase64URLs } from "../../assets/ImageBase64URLs";
+
+import { ImageBase64URLs } from "../../assets/images/ImageBase64URLs";
+import Logo from "../../assets/images/logo.png";
 import { IPageRefs } from "../../common/interfaces";
+import { handleScroll } from "../../common/utils/utilities";
 import "./navbar.css";
 
 interface INavBarProps {
@@ -14,15 +17,6 @@ export default function NavBar(props: INavBarProps) {
   const [isNavLinksDropdownOpen, setIsNavLinksDropdownOpen] =
     useState<boolean>(false);
 
-  const handleScroll = (ref: RefObject<HTMLElement>) => {
-    if (ref.current) {
-      window.scrollTo({
-        top: ref.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
   const toggleNavlinksDropdown = () => {
     setIsNavLinksDropdownOpen(!isNavLinksDropdownOpen);
   };
@@ -31,7 +25,7 @@ export default function NavBar(props: INavBarProps) {
     <div className="navbar">
       <img
         className="logo-img"
-        src={ImageBase64URLs.anufolioLogo}
+        src={Logo}
         alt="anufolio"
         onClick={() => handleScroll(introRef)}
       />
@@ -47,17 +41,16 @@ export default function NavBar(props: INavBarProps) {
             className="toggle-open-img"
             onClick={toggleNavlinksDropdown}
             src={ImageBase64URLs.toggleOpen}
+            alt="toggle-open"
           />
           <img
             onClick={toggleNavlinksDropdown}
             className="toggle-close-img"
             src={ImageBase64URLs.toggleClose}
+            alt="toggle-close"
           />
         </div>
         <ul className="links">
-          <li className="link active" onClick={() => handleScroll(introRef)}>
-            Home
-          </li>
           <li className="link" onClick={() => handleScroll(aboutRef)}>
             About
           </li>

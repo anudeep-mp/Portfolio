@@ -1,0 +1,38 @@
+.side-nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.side-nav .nav-links {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-nav .side-nav-item {
+  color: var(--text-color1-white);
+  padding : 1.5rem 0;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.side-nav .side-nav-item:hover {
+  color: var(--primary-color);
+}
+
+.side-nav .logo-img{
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  border: 2px solid;
+  border-color: var(--primary-color);
+  border-radius: 50%;
+}

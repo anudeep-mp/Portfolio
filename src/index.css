@@ -9,43 +9,87 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: show;
   overflow-x: hidden;
+  background-color: var(--main-background-color);
 }
+
+/* scroll bar css */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--nav-background-color);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-bg-color);
+  border-radius: 6px;
+  border: 3px solid var(--nav-background-color);
+}
+/* scroll bar css */
 
 * {
   font-family: "Alegreya", serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  line-height: 1em;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
 }
 
 :root {
   font-size: 16px;
+  --primary-color: #e63329;
+  --secondary-color: #f8eaea;
+  --ternery-color: rgb(255, 122, 122);
+  --nav-background-color: #181818;
+  --main-background-color: #000000;
+  --mini-background-color: rgba(120, 98, 207, 0.329);
+  --mini-background-color2: #ffffff40;
+  --mini-background-color3: #ffffff50;
+  --text-color1-white: #ffffff;
+  --text-color2-gold: #e5b582;
+  --text-color3-blue: #84b2fb;
+  --break-line-gradient-color1: var(--primary-color);
+  --break-line-gradient-color2: transparent;
+  --scroll-thumb-bg-color: #24123a;
+  --scroll-thumb-thickness: 4px;
+  --donut-block-1-color: #009fe3;
+  --donut-block-2-color: #367bc0;
+  --donut-block-3-color: #6b569b;
+  --donut-block-4-color: #a32f76;
+  --donut-block-5-color: #d70b52;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 0px) and (max-width: 510px) {
   :root {
     font-size: 12px;
   }
 }
 
-body.resumeOpen {
-  overflow-y: hidden;
+@media (min-width: 501px) and (max-width: 750px) {
+  :root {
+    font-size: 12px;
+  }
 }
 
-/* scroll bar css */
-*::-webkit-scrollbar {
-  width: 0px;
+@media (min-width: 751px) and (max-width: 1100px) {
+  :root {
+    font-size: 12px;
+  }
 }
 
-body::-webkit-scrollbar {
-  width: 10px;
+@media only screen and (min-device-width: 701px) and (max-device-width: 1000px) and (orientation: landscape) {
+  :root {
+    font-size: 10px;
+  }
 }
 
-body::-webkit-scrollbar-track {
-  background: #000000;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: #24123a;
-  border-radius: 6px;
-  border: 3px solid #000000;
+@media only screen and (min-device-width: 120px) and (max-device-width: 700px) and (orientation: landscape) {
+  :root {
+    font-size: 8px;
+  }
 }

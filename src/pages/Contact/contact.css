@@ -1,0 +1,190 @@
+.section.contact .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section.contact .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 60%;
+  position: relative;
+}
+
+.section.contact .wrapper::before,
+.section.contact .wrapper::after {
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    var(--break-line-gradient-color1),
+    var(--break-line-gradient-color2)
+  );
+}
+
+.section.contact .platform-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 18rem;
+}
+
+.section.contact .contact-form {
+  width: 40%;
+  min-height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+.section.contact .contact-form form {
+  position: relative;
+}
+
+.section.contact .input-form-rail {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  --input-box-width: 30rem;
+}
+
+.section.contact .contact-form .input-field {
+  position: relative;
+  margin: 1rem;
+}
+
+.section.contact .input-form-rail.first-rail .input-field input,
+.section.contact .input-form-rail.first-rail .input-field textarea {
+  width: calc(var(--input-box-width) * 0.465);
+  max-width: calc(var(--input-box-width)* 0.465);
+  min-width: calc(var(--input-box-width) * 0.465);
+}
+
+.section.contact .input-form-rail.second-rail .input-field input,
+.section.contact .input-form-rail.second-rail .input-field textarea,
+.section.contact .input-form-rail.third-rail .input-field input,
+.section.contact .input-form-rail.third-rail .input-field textarea {
+  width: var(--input-box-width);
+  max-width: var(--input-box-width);
+  min-width: var(--input-box-width);
+}
+
+
+.section.contact .contact-form .input-field input,
+.section.contact .contact-form .input-field textarea {
+  border: 0;
+  display: block;
+  padding: 1.5rem 0.8rem 0.6rem;
+  font-size: 1rem;
+  line-height: 1.5em;
+  background-color: var(--mini-background-color2);
+  border-radius: 3px;
+  color: var(--secondary-color);
+}
+
+.section.contact .contact-form .input-field textarea {
+  overflow-y: hidden;
+}
+
+.section.contact .contact-form .input-field input:-webkit-autofill,
+.section.contact .contact-form .input-field input:-webkit-autofill:hover,
+.section.contact .contact-form .input-field input:-webkit-autofill:focus,
+.section.contact .contact-form .input-field input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--secondary-color);
+}
+
+.section.contact .contact-form .input-field input:focus,
+.section.contact .contact-form .input-field input:valid,
+.section.contact .contact-form .input-field textarea:focus,
+.section.contact .contact-form .input-field textarea:valid {
+  outline: 0;
+  border-bottom-color: var(--primary-color);
+}
+
+.section.contact .contact-form .input-field .form-label {
+  position: absolute;
+  top: 1.25rem;
+  left: 0;
+  pointer-events: none;
+  padding: 0 0.8rem;
+}
+
+.section.contact .contact-form .input-field .form-label-letter {
+  display: inline-block;
+  font-size: 1rem;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: var(--ternery-color);
+}
+
+input:focus + .form-label .form-label-letter,
+input:valid + .form-label .form-label-letter,
+textarea:focus + .form-label .form-label-letter,
+textarea:valid + .form-label .form-label-letter {
+  transform: translateY(-0.9rem);
+  font-size: 0.8rem !important;
+}
+
+.section.contact .contact-form .submit-button {
+  background-color: var(--mini-background-color3);
+  padding: 0.8rem 2rem;
+  border-radius: 3px;
+  border: none;
+  position: absolute;
+  right: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: var(--ternery-color);
+}
+
+.section.contact .contact-form .submit-button:hover {
+  background-color: var(--mini-background-color2);
+}
+
+.section.contact .contact-form .submit-button:active {
+  transform: scale(0.95);
+  transition: transfrom 0.5s ease;
+}
+
+.section.contact .platform-links .box-title {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.section.contact .platform-links .contact-links {
+  margin: 1rem;
+}
+
+.section.contact .platforms .contact-link img,
+.section.contact .platforms .social-link img {
+  height: 2rem;
+  margin: 1rem;
+}
+
+@media (max-width: 750px) {
+  .section.contact .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .section.contact .contact-form,
+  .section.contact .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

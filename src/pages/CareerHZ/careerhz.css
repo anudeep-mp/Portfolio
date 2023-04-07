@@ -1,0 +1,143 @@
+.section.careerhz .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.section.careerhz .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.section.careerhz .wrapper::before,
+.section.careerhz .wrapper::after {
+  width: 100%;
+  height: 2px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    var(--break-line-gradient-color1),
+    var(--break-line-gradient-color2)
+  );
+}
+
+.section.careerhz .scroll-container {
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+}
+
+.section.careerhz .scroll-container::-webkit-scrollbar {
+  height: var(--scroll-thumb-thickness);
+  color: var(--ternery-color);
+}
+
+.section.careerhz .scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-bg-color);
+  border-radius: 1rem;
+}
+
+.section.careerhz .step-progress {
+  margin: 6rem 0 4rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.section.careerhz .step-progress-item {
+  padding: 2rem;
+  position: relative;
+  min-width: 23rem;
+  max-height: 12rem;
+}
+
+.section.careerhz .step-progress-item .background-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.15;
+}
+
+.section.careerhz .step-progress-item::before {
+  content: "";
+  position: absolute;
+  left: 7rem;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color2-gold);
+}
+
+.section.careerhz .step-progress-item:last-child::before {
+  display: none;
+}
+
+.section.careerhz .org-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: fit-content;
+  margin: 1rem;
+  position: relative;
+  z-index: 2;
+  color: var(--secondary-color);
+}
+
+.section.careerhz .org-detail .org-position-image {
+  height: 1rem;
+  margin-right: 4px;
+}
+
+.section.careerhz .org-name,
+.section.careerhz .org-tenure {
+  color: var(--ternery-color);
+}
+
+.section.careerhz .org-name:hover {
+  color: var(--primary-color);
+}
+
+.section.careerhz .org-logo {
+  width: 3.5rem;
+  height: fit-content;
+  margin-top: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--main-background-color);
+  padding: 3px;
+  left: 5rem;
+  top: -2rem;
+}
+
+.section.careerhz .scroll-buttons {
+  position: absolute;
+  right: 1rem;
+  bottom: -1rem;
+}
+
+.section.careerhz .scroll-buttons .scroll-button {
+  display: inline;
+  width: 2rem;
+  cursor: pointer;
+  margin: 0 0.3rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--main-background-color);
+}
+
+.section.careerhz .scroll-buttons .scroll-button:hover {
+  background-color: var(--mini-background-color);
+}
