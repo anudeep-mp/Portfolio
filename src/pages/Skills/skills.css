@@ -59,7 +59,6 @@
   border-radius: 1rem;
 }
 
-
 .section.skills .skill-card {
   padding: 0.8rem;
   margin: 1rem;
@@ -71,7 +70,7 @@
   justify-content: center;
   height: 3.6rem;
   width: 3.6rem;
-  cursor: grab
+  cursor: grab;
 }
 
 .section.skills .skill-card.touch {
@@ -292,13 +291,13 @@
 
   .section.skills .skills-basket {
     width: 100%;
-    max-height: 250px;
+    max-height: 150px;
     padding: 0;
   }
 
-.section.skills .scroll-container {
-  height: 300px;
-}
+  .section.skills .scroll-container {
+    max-height: 200px;
+  }
 
   .section.skills .skill-selector {
     width: 90%;
@@ -306,7 +305,25 @@
   }
 
   .section.skills .wrapper {
-    margin: 3rem 0;
+    margin: 2rem 0;
+  }
+
+  .section.skills .skill-card {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .section.skills .skill-card .skill-image {
+    height: 1.5rem;
+  }
+
+  .section.skills .skill-selector .drop-receiver {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .section.skills .skill-selector .drop-receiver .skill-image {
+    height: 2.5rem;
   }
 }
 
