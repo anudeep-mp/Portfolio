@@ -26,12 +26,20 @@ import CubeChatLogo from "../../assets/images/cube-chat-logo.png";
 import CubekartGif from "../../assets/images/cubekart.gif";
 import CubeMusicGif from "../../assets/images/cubemusic.gif";
 import CubeChatGif from "../../assets/images/cubechat.gif";
-
+import MailIcon from "../../assets/images/mail.png";
+import GitHubIcon from "../../assets/images/github.png";
+import LinkedInIcon from "../../assets/images/linkedin.png";
+import TwitterIcon from "../../assets/images/twitter.png";
+import InstagramIcon from "../../assets/images/instagram.png";
+import PhoneIcon from "../../assets/images/phone.png";
+import WhatsAppIcon from "../../assets/images/whatsapp.png";
 
 import {
   ICareerItem,
+  IContactLink,
   IProjectDict,
   ISkillsDict,
+  ISocialLink,
 } from "../../common/interfaces";
 
 export const carrerData: ICareerItem[] = [
@@ -307,3 +315,58 @@ export const projects: IProjectDict = {
 };
 
 export const defaultProjectKey = "cubekart";
+
+export const contactLinks: IContactLink[] = [
+  {
+    id: "phone",
+    icon: PhoneIcon,
+    link: "tel:+91-900-332-2159",
+    label: "Phone",
+    value: "+91-900-332-2159",
+  },
+  {
+    id: "mail",
+    icon: MailIcon,
+    link: "mailto:anudeep.mp7@gmail.com",
+    label: "Mail",
+    value: "anudeep.mp7@gmail.com",
+  },
+  {
+    id: "whatsapp",
+    icon: WhatsAppIcon,
+    link: "https://wa.me/919003322159",
+    label: "WhatsApp",
+    value: "+91-900-332-2159",
+  },
+];
+
+export const socialLinks: ISocialLink[] = [
+  {
+    id: "github",
+    icon: GitHubIcon,
+    link: "",
+    label: "GitHub",
+    value: "",
+  },
+  {
+    id: "linkedin",
+    icon: LinkedInIcon,
+    link: "https://www.linkedin.com/in/anudeep-m-7b8b3b1b3/",
+    label: "LinkedIn",
+    value: "Anudeep M",
+  },
+  {
+    id: "twitter",
+    icon: TwitterIcon,
+    link: "https://twitter.com/AnudeepM7",
+    label: "Twitter",
+    value: "@AnudeepM7",
+  },
+  {
+    id: "instagram",
+    icon: InstagramIcon,
+    link: "https://www.instagram.com/anudeep_m7/",
+    label: "Instagram",
+    value: "@anudeep_m7",
+  },
+];

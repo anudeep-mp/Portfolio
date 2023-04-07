@@ -68,3 +68,18 @@ export interface IProject {
 export interface IProjectDict {
   [key: string]: IProject;
 }
+
+export interface IContactLink {
+  id: string;
+  label: string;
+  value: string;
+  link: string;
+  icon: string;
+}
+export interface ISocialLink {
+  id: string;
+  label: string;
+  value: string;
+  link: string;
+  icon: string;
+}

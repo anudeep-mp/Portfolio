@@ -75,14 +75,14 @@
 
 .section.projects .projects-details .project-card .logo {
   height: 1.5rem;
-  margin-right: 0.5rem;
+  margin: 0 0.5rem;
 }
 
 .section.projects .projects-details .project-card .title {
   font-size: 1.2rem;
   font-weight: 600;
   height: fit-content;
-  color: #84b2fb;
+  color: var(--text-color3-blue);;
   margin: 0;
 }
 
