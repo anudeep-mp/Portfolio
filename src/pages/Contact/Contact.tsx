@@ -38,7 +38,7 @@ export default function Contact() {
               <div className="platforms">
                 {contactLinks.map((item) => {
                   return (
-                    <a href={item.link} key={item.id} className="contact-link">
+                    <a href={item.link} key={item.id} className="contact-link" target="_blank">
                       <img src={item.icon} />
                     </a>
                   );
@@ -50,7 +50,7 @@ export default function Contact() {
               <div className="platforms">
                 {socialLinks.map((item) => {
                   return (
-                    <a href={item.link} key={item.id} className="social-link">
+                    <a href={item.link} key={item.id} className="social-link" target="_blank">
                       <img src={item.icon} />
                     </a>
                   );
@@ -117,7 +117,7 @@ export default function Contact() {
               className="submit-button"
               type="submit"
               value={"Send Message"}
-            ></input>
+            />
           </form>
         </div>
       </div>
