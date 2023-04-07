@@ -102,6 +102,7 @@ export default function Contact() {
                 <textarea
                   name="message"
                   rows={2}
+                  style={{ resize: "none" }}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required

@@ -56,6 +56,7 @@
   justify-content: space-between;
   align-items: center;
   height: fit-content;
+  --input-box-width: 30rem;
 }
 
 .section.contact .contact-form .input-field {
@@ -65,19 +66,20 @@
 
 .section.contact .input-form-rail.first-rail .input-field input,
 .section.contact .input-form-rail.first-rail .input-field textarea {
-  width: 14rem;
-  max-width: 14rem;
-  min-width: 14rem;
+  width: calc(var(--input-box-width) * 0.465);
+  max-width: calc(var(--input-box-width)* 0.465);
+  min-width: calc(var(--input-box-width) * 0.465);
 }
 
 .section.contact .input-form-rail.second-rail .input-field input,
 .section.contact .input-form-rail.second-rail .input-field textarea,
 .section.contact .input-form-rail.third-rail .input-field input,
 .section.contact .input-form-rail.third-rail .input-field textarea {
-  width: 30rem;
-  max-width: 30rem;
-  min-width: 30rem;
+  width: var(--input-box-width);
+  max-width: var(--input-box-width);
+  min-width: var(--input-box-width);
 }
+
 
 .section.contact .contact-form .input-field input,
 .section.contact .contact-form .input-field textarea {
@@ -86,7 +88,7 @@
   padding: 1.5rem 0.8rem 0.6rem;
   font-size: 1rem;
   line-height: 1.5em;
-  background-color: #ffffff40;
+  background-color: var(--mini-background-color2);
   border-radius: 3px;
   color: var(--secondary-color);
 }
@@ -111,7 +113,7 @@
   border-bottom-color: var(--primary-color);
 }
 
-.section.contact .contact-form .input-field label {
+.section.contact .contact-form .input-field .form-label {
   position: absolute;
   top: 1.25rem;
   left: 0;
@@ -136,7 +138,7 @@ textarea:valid + .form-label .form-label-letter {
 }
 
 .section.contact .contact-form .submit-button {
-  background-color: #ffffff50;
+  background-color: var(--mini-background-color3);
   padding: 0.8rem 2rem;
   border-radius: 3px;
   border: none;
@@ -148,7 +150,7 @@ textarea:valid + .form-label .form-label-letter {
 }
 
 .section.contact .contact-form .submit-button:hover {
-  background-color: #ffffff40;
+  background-color: var(--mini-background-color2);
 }
 
 .section.contact .contact-form .submit-button:active {
