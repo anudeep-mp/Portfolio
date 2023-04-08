@@ -150,7 +150,7 @@ export const skills: ISkillsDict = {
     id: "redux",
     techName: "Redux",
     description:
-      "A predictable state container used in JavaScript applications, often used in conjunction with React to manage complex state changes.",
+      "A state management library used in conjunction with React to manage application state and data flow.",
     icon: ReduxIcon,
     projectsCount: 3,
     skillLevelPercentage: 60,
@@ -212,7 +212,7 @@ export const skills: ISkillsDict = {
     id: "expressjs",
     techName: "Express JS",
     description:
-      "A popular NoSQL database used for storing and managing unstructured data, often used in web and mobile applications to provide flexible data storage.",
+      "A popular web framework for Node JS that provides a robust set of features for web and mobile applications.",
     icon: ExpressIcon,
     projectsCount: 10,
     skillLevelPercentage: 20,
@@ -225,7 +225,7 @@ export const skills: ISkillsDict = {
     id: "mongodb",
     techName: "Mongo DB",
     description:
-      "A protocol used for bi-directional communication between a client and server, allowing real-time data transfer and enabling the creation of interactive web applications.",
+      "A popular NoSQL database used for storing and managing unstructured data, often used in web and mobile applications to provide flexible data storage.",
     icon: MongoDBIcon,
     projectsCount: 3,
     skillLevelPercentage: 40,
@@ -237,7 +237,7 @@ export const skills: ISkillsDict = {
     id: "websockets",
     techName: "Web Sockets",
     description:
-      "A computer communications protocol that provides full-duplex communication channels over a single TCP connection.",
+      "A protocol used for bi-directional communication between a client and server, allowing real-time data transfer and enabling the creation of interactive web applications.",
     icon: WebSocketsIcon,
     projectsCount: 1,
     skillLevelPercentage: 30,
