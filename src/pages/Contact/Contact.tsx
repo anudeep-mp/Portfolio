@@ -2,15 +2,33 @@ import { useState } from "react";
 import { contactLinks, socialLinks } from "../../assets/data/data";
 import "./contact.css";
 
+enum sendStauts {
+  INACTIVE = "INACTIVE",
+  TRIGGERED = "TRIGGERED",
+  SENT = "SENT",
+  FAILED = "FAILED",
+}
+
 export default function Contact() {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [messageSendingStatus, setMessageSendingStatus] = useState<sendStauts>(
+    sendStauts.INACTIVE
+  );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(name, email, message);
+    setMessageSendingStatus(sendStauts.TRIGGERED);
+    setMessageSendingStatus(sendStauts.FAILED);
+    setTimeout(() => {
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+      setMessageSendingStatus(sendStauts.FAILED);
+    }, 2000);
   };
 
   const renderFormLabel = (label: string) => {
@@ -19,7 +37,7 @@ export default function Contact() {
         <span
           className="form-label-letter"
           style={{ transitionDelay: `${index * 50}ms` }}
-          key={letter + index}
+          key={letter + index + letter}
         >
           {letter}
         </span>
@@ -38,7 +56,12 @@ export default function Contact() {
               <div className="platforms">
                 {contactLinks.map((item) => {
                   return (
-                    <a href={item.link} key={item.id} className="contact-link" target="_blank">
+                    <a
+                      href={item.link}
+                      key={item.id}
+                      className="contact-link"
+                      target="_blank"
+                    >
                       <img src={item.icon} />
                     </a>
                   );
@@ -50,7 +73,12 @@ export default function Contact() {
               <div className="platforms">
                 {socialLinks.map((item) => {
                   return (
-                    <a href={item.link} key={item.id} className="social-link" target="_blank">
+                    <a
+                      href={item.link}
+                      key={item.id}
+                      className="social-link"
+                      target="_blank"
+                    >
                       <img src={item.icon} />
                     </a>
                   );
@@ -112,12 +140,22 @@ export default function Contact() {
                 </label>
               </div>
             </div>
-
-            <input
-              className="submit-button"
-              type="submit"
-              value={"Send Message"}
-            />
+            <div className="input-form-rail fourth-rail">
+              <div>
+                {messageSendingStatus === sendStauts.TRIGGERED
+                  ? "Sending"
+                  : messageSendingStatus === sendStauts.SENT
+                  ? "Sent"
+                  : messageSendingStatus === sendStauts.FAILED
+                  ? "Failed"
+                  : ""}
+              </div>
+              <input
+                className="submit-button"
+                type="submit"
+                value={"Send Message"}
+              />
+            </div>
           </form>
         </div>
       </div>
