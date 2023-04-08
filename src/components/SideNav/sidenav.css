@@ -17,17 +17,28 @@
 
 .side-nav .side-nav-item {
   color: var(--text-color1-white);
-  padding : 1.5rem 0;
+  padding: 1.5rem 0;
   width: 100%;
   cursor: pointer;
   text-align: center;
 }
 
-.side-nav .side-nav-item:hover {
-  color: var(--primary-color);
+.side-nav .side-nav-item.active {
+  background: linear-gradient(
+    90deg,
+    var(--mini-background-color4),
+    var(--nav-background-color)
+  );
 }
 
-.side-nav .logo-img{
+.side-nav .side-nav-item:not(.active):hover {
+  color: var(--primary-color);
+}
+.side-nav .side-nav-item.active:hover {
+  color: var(--text-color2-gold);
+}
+
+.side-nav .logo-img {
   height: 5rem;
   width: 5rem;
   margin: 1rem 0;
