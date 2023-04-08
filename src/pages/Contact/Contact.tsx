@@ -37,7 +37,7 @@ export default function Contact() {
         <span
           className="form-label-letter"
           style={{ transitionDelay: `${index * 50}ms` }}
-          key={letter + index}
+          key={letter + index + letter}
         >
           {letter}
         </span>
