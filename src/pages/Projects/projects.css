@@ -194,6 +194,7 @@
 
   .section.projects .projects-details .project-description {
     height: 30%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     overflow-y: auto;
