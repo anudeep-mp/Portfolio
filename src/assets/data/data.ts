@@ -90,7 +90,7 @@ export const skills: ISkillsDict = {
     id: "javascript",
     techName: "JavaScript",
     description:
-      "A programming language used to create interactive web pages and dynamic content on websites",
+      "A scripting language used for creating interactive web pages and web applications, often used alongside HTML and CSS.",
     icon: JavaScriptIcon,
     projectsCount: 10,
     skillLevelPercentage: 80,
@@ -102,7 +102,7 @@ export const skills: ISkillsDict = {
     id: "reactjs",
     techName: "React JS",
     description:
-      "A popular technology used to build user interfaces for websites and mobile apps.",
+      "A JavaScript library used for building user interfaces, allowing developers to create reusable UI components and build complex applications.",
     icon: ReactIcon,
     projectsCount: 4,
     skillLevelPercentage: 70,
@@ -114,7 +114,7 @@ export const skills: ISkillsDict = {
     id: "typescript",
     techName: "TypeScript",
     description:
-      "A superset of JavaScript that provides additional features like strong typing and better error checking for large-scale web applications.",
+      "A typed superset of JavaScript that provides better type checking and enables better code organization, allowing for more maintainable codebases.",
     icon: TypeScriptIcon,
     projectsCount: 3,
     skillLevelPercentage: 60,
@@ -126,7 +126,7 @@ export const skills: ISkillsDict = {
     id: "html",
     techName: "HTML",
     description:
-      "A markup language used to structure and display content on web pages.",
+      "A markup language used to structure content on web pages, defining the layout and appearance of text, images, and other media.",
     icon: HTMLIcon,
     projectsCount: 10,
     skillLevelPercentage: 80,
@@ -138,7 +138,7 @@ export const skills: ISkillsDict = {
     id: "css",
     techName: "CSS",
     description:
-      "A style sheet language used to make web pages look visually appealing by adding styling details like colors, fonts, and layouts.",
+      "A stylesheet language used to describe the presentation of HTML content, controlling its appearance, layout, and other visual aspects.",
     icon: CSSIcon,
     projectsCount: 10,
     skillLevelPercentage: 80,
@@ -162,7 +162,7 @@ export const skills: ISkillsDict = {
     id: "fluentui",
     techName: "Fluent UI",
     description:
-      "A design system and set of React components developed by Microsoft for building web applications with a consistent look and feel.",
+      "A design system developed by Microsoft for building user interfaces, offering a set of reusable components and tools for creating modern web and mobile applications.",
     icon: FluentUIIcon,
     projectsCount: 1,
     skillLevelPercentage: 80,
@@ -174,7 +174,7 @@ export const skills: ISkillsDict = {
     id: "bootstrap",
     techName: "BootStrap",
     description:
-      "A popular library used to build responsive, mobile-first projects on the web using React JS and Bootstrap.",
+      "A popular CSS framework used for building responsive and mobile-first web applications, providing a set of pre-built UI components and styles.",
     icon: BootStrapIcon,
     projectsCount: 3,
     skillLevelPercentage: 70,
@@ -187,7 +187,7 @@ export const skills: ISkillsDict = {
     id: "jest",
     techName: "Jest",
     description:
-      "A JavaScript testing framework used to test React applications.",
+      "A JavaScript testing framework developed by Facebook, used for unit and integration testing of React applications and other JavaScript projects.",
     icon: JestIcon,
     projectsCount: 1,
     skillLevelPercentage: 50,
@@ -199,7 +199,7 @@ export const skills: ISkillsDict = {
     id: "nodejs",
     techName: "Node JS",
     description:
-      "A server-side runtime environment that allows developers to run JavaScript code outside of a web browser.",
+      "A JavaScript runtime built on the Chrome V8 engine, used for building server-side web applications and other backend services in JavaScript.",
     icon: NodeIcon,
     projectsCount: 3,
     skillLevelPercentage: 20,
@@ -225,7 +225,7 @@ export const skills: ISkillsDict = {
     id: "mongodb",
     techName: "Mongo DB",
     description:
-      "A popular NoSQL database used to store data in JSON-like documents.",
+      "A popular NoSQL database used for storing and managing unstructured data, often used in web and mobile applications to provide flexible data storage.",
     icon: MongoDBIcon,
     projectsCount: 3,
     skillLevelPercentage: 40,
@@ -237,7 +237,7 @@ export const skills: ISkillsDict = {
     id: "websockets",
     techName: "Web Sockets",
     description:
-      "A computer communications protocol that provides full-duplex communication channels over a single TCP connection.",
+      "A protocol used for bi-directional communication between a client and server, allowing real-time data transfer and enabling the creation of interactive web applications.",
     icon: WebSocketsIcon,
     projectsCount: 1,
     skillLevelPercentage: 30,

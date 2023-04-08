@@ -3,14 +3,45 @@ import Logo from "../../assets/images/logo-nb.png";
 import "./sidenav.css";
 import Divider from "../Divider";
 import { handleScroll } from "../../common/utils/utilities";
+import { useIntersectionObserver } from "../../common/hooks/useIntersectionObserver";
 
 interface INavBarProps {
   refs: IPageRefs;
 }
 
 export default function SideNav(props: INavBarProps) {
-  const { introRef, aboutRef, careerHZRef, careerRef, skillsRef, projectsRef, contactRef } =
-    props.refs;
+  const {
+    introRef,
+    aboutRef,
+    careerHZRef,
+    skillsRef,
+    projectsRef,
+    contactRef,
+  } = props.refs;
+
+  const isIntroRefActive: boolean = useIntersectionObserver(introRef, {
+    threshold: 0.5,
+  });
+
+  const isAboutRefActive: boolean = useIntersectionObserver(aboutRef, {
+    threshold: 0.5,
+  });
+
+  const isCareerHZRefActive: boolean = useIntersectionObserver(careerHZRef, {
+    threshold: 0.5,
+  });
+
+  const isSkillsRefActive: boolean = useIntersectionObserver(skillsRef, {
+    threshold: 0.5,
+  });
+
+  const isProjectsRefActive: boolean = useIntersectionObserver(projectsRef, {
+    threshold: 0.5,
+  });
+
+  const isContactRefActive: boolean = useIntersectionObserver(contactRef, {
+    threshold: 0.5,
+  });
 
   return (
     <div className="side-nav">
@@ -21,15 +52,24 @@ export default function SideNav(props: INavBarProps) {
         onClick={() => handleScroll(introRef)}
       />
       <div className="nav-links">
-        <div className="side-nav-item" onClick={() => handleScroll(introRef)}>
+        <div
+          className={`side-nav-item ${isIntroRefActive && "active"}`}
+          onClick={() => handleScroll(introRef)}
+        >
           Home
         </div>
         <Divider />
-        <div className="side-nav-item" onClick={() => handleScroll(aboutRef)}>
+        <div
+          className={`side-nav-item ${isAboutRefActive && "active"}`}
+          onClick={() => handleScroll(aboutRef)}
+        >
           About
         </div>
         <Divider />
-        <div className="side-nav-item" onClick={() => handleScroll(careerHZRef)}>
+        <div
+          className={`side-nav-item ${isCareerHZRefActive && "active"}`}
+          onClick={() => handleScroll(careerHZRef)}
+        >
           Career
         </div>
         <Divider />
@@ -37,18 +77,24 @@ export default function SideNav(props: INavBarProps) {
           Career
         </div>
         <Divider /> */}
-        <div className="side-nav-item" onClick={() => handleScroll(skillsRef)}>
+        <div
+          className={`side-nav-item ${isSkillsRefActive && "active"}`}
+          onClick={() => handleScroll(skillsRef)}
+        >
           Skills
         </div>
         <Divider />
         <div
-          className="side-nav-item"
+          className={`side-nav-item ${isProjectsRefActive && "active"}`}
           onClick={() => handleScroll(projectsRef)}
         >
           Projects
         </div>
         <Divider />
-        <div className="side-nav-item" onClick={() => handleScroll(contactRef)}>
+        <div
+          className={`side-nav-item ${isContactRefActive && "active"}`}
+          onClick={() => handleScroll(contactRef)}
+        >
           Contact
         </div>
       </div>
