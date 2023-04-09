@@ -33,6 +33,7 @@ import TwitterIcon from "../../assets/images/twitter.png";
 import InstagramIcon from "../../assets/images/instagram.png";
 import PhoneIcon from "../../assets/images/phone.png";
 import WhatsAppIcon from "../../assets/images/whatsapp.png";
+import TelegramIcon from "../../assets/images/telegram.png";
 
 import {
   ICareerItem,
@@ -338,6 +339,13 @@ export const contactLinks: IContactLink[] = [
     label: "WhatsApp",
     socialId: "+91-900-332-2159",
   },
+  {
+    id: "telegram",
+    icon: TelegramIcon,
+    link: "https://t.me/i_anudeep",
+    label: "Telegram",
+    socialId: "@i_anudeep",
+  }
 ];
 
 export const socialLinks: ISocialLink[] = [

@@ -60,11 +60,14 @@
   --input-box-width: 30rem;
 }
 
+.section.contact .input-form-rail.fourth-rail {
+  justify-content: flex-end;
+}
+
 .section.contact .contact-form .input-field {
   position: relative;
   width: 100%;
 }
-
 
 .section.contact .input-form-rail.first-rail .input-field {
   width: 48%;
@@ -135,11 +138,12 @@ textarea:valid + .form-label .form-label-letter {
 
 .section.contact .contact-form .submit-button {
   background-color: var(--mini-background-color3);
-  padding: 0.8rem 2rem;
+  padding: 1.1rem 0;
   border-radius: 3px;
   border: none;
   cursor: pointer;
   color: var(--ternery-color);
+  width: 45%;
 }
 
 .section.contact .contact-form .submit-button:hover {
@@ -165,6 +169,17 @@ textarea:valid + .form-label .form-label-letter {
 .section.contact .platforms .social-link img {
   height: 2rem;
   margin: 1rem;
+}
+
+.section.contact .sending-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.contact .sending-status .sending-status-icon {
+  height: 1rem;
+  margin-left: 0.5rem;
 }
 
 @media (max-width: 750px) {
