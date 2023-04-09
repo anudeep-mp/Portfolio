@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { contactLinks, socialLinks } from "../../assets/data/data";
+import SendingIcon from "../../assets/images/sendingIcon.svg";
+import SentIcon from "../../assets/images/sent.png";
+import FailedIcon from "../../assets/images/failed.png";
+import SendIcon from "../../assets/images/send.png";
 import "./contact.css";
 
 enum sendStauts {
@@ -21,7 +25,6 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessageSendingStatus(sendStauts.TRIGGERED);
-    setMessageSendingStatus(sendStauts.FAILED);
     setTimeout(() => {
       setName("");
       setEmail("");
@@ -141,20 +144,29 @@ export default function Contact() {
               </div>
             </div>
             <div className="input-form-rail fourth-rail">
-              <div>
-                {messageSendingStatus === sendStauts.TRIGGERED
-                  ? "Sending"
-                  : messageSendingStatus === sendStauts.SENT
-                  ? "Sent"
-                  : messageSendingStatus === sendStauts.FAILED
-                  ? "Failed"
-                  : ""}
-              </div>
-              <input
-                className="submit-button"
-                type="submit"
-                value={"Send Message"}
-              />
+              <button className="submit-button" type="submit">
+                {messageSendingStatus === sendStauts.TRIGGERED ? (
+                  <div className="sending-status">
+                    <span>Sending</span>
+                    <img src={SendingIcon} className="sending-status-icon" />
+                  </div>
+                ) : messageSendingStatus === sendStauts.SENT ? (
+                  <div className="sending-status">
+                    <span>Sent</span>
+                    <img src={SentIcon} className="sending-status-icon" />
+                  </div>
+                ) : messageSendingStatus === sendStauts.FAILED ? (
+                  <div className="sending-status">
+                    <span>Failed</span>
+                    <img src={FailedIcon} className="sending-status-icon" />
+                  </div>
+                ) : (
+                  <div className="sending-status">
+                    <span>Send message</span>
+                    <img src={SendIcon} className="sending-status-icon" />
+                  </div>
+                )}
+              </button>
             </div>
           </form>
         </div>
