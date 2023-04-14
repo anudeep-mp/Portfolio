@@ -182,6 +182,10 @@ textarea:valid + .form-label .form-label-letter {
   margin-left: 0.5rem;
 }
 
+.section.contact .sending-status .button-text {
+  font-size: 1rem;
+}
+
 @media (max-width: 750px) {
   .section.contact .content {
     flex-direction: column;

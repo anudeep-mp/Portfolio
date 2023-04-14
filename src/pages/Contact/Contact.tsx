@@ -1,9 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { contactLinks, socialLinks } from "../../assets/data/data";
 import SendingIcon from "../../assets/images/sendingIcon.svg";
 import SentIcon from "../../assets/images/sent.png";
 import FailedIcon from "../../assets/images/failed.png";
-import SendIcon from "../../assets/images/send.png";
+import SendIcon from "../../assets/images/send.svg";
 import "./contact.css";
 
 enum sendStauts {
@@ -35,17 +35,18 @@ export default function Contact() {
   };
 
   const renderFormLabel = (label: string) => {
-    return label.split("").map((letter, index) => {
-      return (
-        <span
-          className="form-label-letter"
-          style={{ transitionDelay: `${index * 50}ms` }}
-          key={letter + index + letter}
-        >
-          {letter}
-        </span>
-      );
-    });
+    return React.Children.toArray(
+      label.split("").map((letter, index) => {
+        return (
+          <span
+            className="form-label-letter"
+            style={{ transitionDelay: `${index * 50}ms` }}
+          >
+            {letter}
+          </span>
+        );
+      })
+    );
   };
 
   return (
@@ -95,7 +96,7 @@ export default function Contact() {
             <div className="input-form-rail first-rail">
               <div className="input-field">
                 <input
-                  name="nm"
+                  name="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
@@ -147,22 +148,22 @@ export default function Contact() {
               <button className="submit-button" type="submit">
                 {messageSendingStatus === sendStauts.TRIGGERED ? (
                   <div className="sending-status">
-                    <span>Sending</span>
+                    <span className="button-text">Sending</span>
                     <img src={SendingIcon} className="sending-status-icon" />
                   </div>
                 ) : messageSendingStatus === sendStauts.SENT ? (
                   <div className="sending-status">
-                    <span>Sent</span>
+                    <span className="button-text">Sent</span>
                     <img src={SentIcon} className="sending-status-icon" />
                   </div>
                 ) : messageSendingStatus === sendStauts.FAILED ? (
                   <div className="sending-status">
-                    <span>Failed</span>
+                    <span className="button-text">Failed</span>
                     <img src={FailedIcon} className="sending-status-icon" />
                   </div>
                 ) : (
                   <div className="sending-status">
-                    <span>Send message</span>
+                    <span className="button-text">Send message</span>
                     <img src={SendIcon} className="sending-status-icon" />
                   </div>
                 )}
