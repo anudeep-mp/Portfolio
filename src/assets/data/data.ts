@@ -350,18 +350,18 @@ export const contactLinks: IContactLink[] = [
 
 export const socialLinks: ISocialLink[] = [
   {
-    id: "github",
-    icon: GitHubIcon,
-    link: "https://github.com/anudeep-mp",
-    label: "GitHub",
-    socialId: "anudeep-mp",
-  },
-  {
     id: "linkedin",
     icon: LinkedInIcon,
     link: "https://www.linkedin.com/in/anudeep-m",
     label: "LinkedIn",
     socialId: "anudeep-m",
+  },
+  {
+    id: "github",
+    icon: GitHubIcon,
+    link: "https://github.com/anudeep-mp",
+    label: "GitHub",
+    socialId: "anudeep-mp",
   },
   {
     id: "twitter",
