@@ -25,7 +25,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessageSendingStatus(sendStauts.TRIGGERED);
-    fetch("http://localhost:4444/api/sendmessage", {
+    fetch("https://uat-anufolio.onrender.com/api/sendmessage", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
