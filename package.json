@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite --port 7777 --open --mode development",
     "build": "tsc && vite build",
+    "uat-build": "tsc && vite build --mode uat",
+    "prod-build": "tsc && vite build --mode production",
     "preview": "vite preview"
   },
   "dependencies": {
