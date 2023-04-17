@@ -25,13 +25,33 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessageSendingStatus(sendStauts.TRIGGERED);
-    setTimeout(() => {
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-      setMessageSendingStatus(sendStauts.FAILED);
-    }, 2000);
+    fetch(`${process.env.REACT_APP_API_URL}/sendmessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        subject,
+        message,
+      }),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          setMessageSendingStatus(sendStauts.SENT);
+        } else {
+          setMessageSendingStatus(sendStauts.FAILED);
+        }
+      })
+      .catch((err) => {
+        setMessageSendingStatus(sendStauts.FAILED);
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setMessageSendingStatus(sendStauts.INACTIVE);
+        }, 10000);
+      });
   };
 
   const renderFormLabel = (label: string) => {

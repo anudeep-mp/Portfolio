@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 7777 --open",
+    "dev": "vite --port 7777 --open --mode development",
     "build": "tsc && vite build",
+    "uat-build": "tsc && vite build --mode uat",
+    "prod-build": "tsc && vite build --mode production",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -13,6 +15,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^18.15.11",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.0.0",
