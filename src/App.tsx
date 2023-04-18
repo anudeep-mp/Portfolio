@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { IPageRefs } from "./common/interfaces";
 import About from "./pages/About/About";
@@ -23,6 +23,27 @@ function App() {
     contactRef: useRef<HTMLElement>(null),
   };
 
+  const isMounted = useRef<boolean>(false);
+
+  useEffect(() => {
+    if (!isMounted.current) {
+      track();
+      isMounted.current = true;
+    }
+  }, []);
+
+  const track = () => {
+    fetch(process.env.REACT_APP_API_URL + "/track", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        watchTime: new Date().getTime(),
+      }),
+    });
+  };
+
   return (
     <div className="App">
       <div className="side-nav-container">
@@ -33,7 +54,7 @@ function App() {
           <Intro />
         </section>
         <section ref={refs.aboutRef}>
-          <About contactRef={refs.contactRef}/>
+          <About contactRef={refs.contactRef} />
         </section>
         <section ref={refs.careerHZRef}>
           <CareerHZ />
