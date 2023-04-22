@@ -11,6 +11,7 @@ import JavaScriptIcon from "../../assets/images/javascript.png";
 import NodeIcon from "../../assets/images/node.png";
 import ReactIcon from "../../assets/images/react.png";
 import ReduxIcon from "../../assets/images/redux.png";
+import GoLangIcon from "../../assets/images/go.png";
 import HTMLIcon from "../../assets/images/html.png";
 import CSSIcon from "../../assets/images/css.png";
 import ExpressIcon from "../../assets/images/express.png";
@@ -121,6 +122,18 @@ export const skills: ISkillsDict = {
     skillLevelPercentage: 60,
     isActive: true,
     startDate: "06/2022",
+    experienceType: "relative",
+  },
+  golang: {
+    id: "golang",
+    techName: "Go",
+    description:
+      "Go is an open-source programming language which is popular for its simplicity, fast compile times, efficient memory management, and built-in concurrency support, making it a great choice for building high-performance and scalable applications.",
+    icon: GoLangIcon,
+    projectsCount: 1,
+    skillLevelPercentage: 10,
+    isActive: true,
+    startDate: "03/2023",
     experienceType: "relative",
   },
   html: {
@@ -242,7 +255,7 @@ export const skills: ISkillsDict = {
     icon: WebSocketsIcon,
     projectsCount: 1,
     skillLevelPercentage: 30,
-    isActive: true,
+    isActive: false,
     experienceType: "fixed",
     startDate: "08/2021",
     endDate: "12/2021",
