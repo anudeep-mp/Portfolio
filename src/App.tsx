@@ -8,9 +8,10 @@ import Intro from "./pages/Intro/Intro";
 import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skills";
 import SideNav from "./components/SideNav/SideNav";
+import CareerHZ from "./pages/CareerHZ/CareerHZ";
 
 import "./App.css";
-import CareerHZ from "./pages/CareerHZ/CareerHZ";
+import { TrackerWrapper } from "./components/TrackerWrapper";
 
 function App() {
   const refs: IPageRefs = {
@@ -21,27 +22,6 @@ function App() {
     skillsRef: useRef<HTMLElement>(null),
     projectsRef: useRef<HTMLElement>(null),
     contactRef: useRef<HTMLElement>(null),
-  };
-
-  const isMounted = useRef<boolean>(false);
-
-  useEffect(() => {
-    if (!isMounted.current) {
-      track();
-      isMounted.current = true;
-    }
-  }, []);
-
-  const track = () => {
-    fetch(process.env.REACT_APP_API_URL + "/track", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        watchTime: new Date().getTime(),
-      }),
-    });
   };
 
   return (
@@ -76,4 +56,10 @@ function App() {
   );
 }
 
-export default App;
+const WrappedApp = () => (
+  <TrackerWrapper>
+    <App />
+  </TrackerWrapper>
+);
+
+export { WrappedApp as App};
