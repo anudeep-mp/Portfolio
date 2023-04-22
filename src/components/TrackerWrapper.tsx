@@ -46,7 +46,7 @@ export const TrackerWrapper: React.FC<WrapperProps> = ({ children }) => {
       }
 
       if (!sessionId) {
-        const newSessionId = self.crypto.randomUUID();
+        newSessionId = self.crypto.randomUUID();
         setSessionId(newSessionId);
       }
 
