@@ -22,17 +22,20 @@ export const TrackerWrapper: React.FC<WrapperProps> = ({ children }) => {
   );
 
   const track = (userId: string, sessionId: string) => {
-    fetch(process.env.REACT_APP_API_URL + "/track", {
+    const options: any = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Environment": process.env.ENVIRONMENT,
       },
       body: JSON.stringify({
         userId: userId,
         sessionId: sessionId,
         timeStamp: new Date().toISOString(),
       }),
-    });
+    };
+
+    fetch(process.env.TRACKER_END_POINT + "/track", options);
   };
 
   useEffect(() => {

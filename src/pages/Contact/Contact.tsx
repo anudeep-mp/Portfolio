@@ -25,7 +25,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessageSendingStatus(sendStauts.TRIGGERED);
-    fetch(`${process.env.REACT_APP_API_URL}/sendmessage`, {
+    fetch(`${process.env.FOLIO_API_ENDPOINT}/sendmessage`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
