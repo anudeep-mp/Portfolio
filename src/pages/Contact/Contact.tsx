@@ -38,7 +38,7 @@ export default function Contact() {
       }),
     })
       .then((res) => {
-        if (res.status === 200) {
+        if (res.status === 200 || res.status === 201) {
           setMessageSendingStatus(sendStauts.SENT);
         } else {
           setMessageSendingStatus(sendStauts.FAILED);
