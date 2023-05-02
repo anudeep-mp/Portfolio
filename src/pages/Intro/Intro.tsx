@@ -9,9 +9,10 @@ export default function Intro() {
         <div className="content">
           <div className="heading-hi">hey! I'm</div>
           <div className="heading-name">Anudeep</div>
-          <div className="heading-desc">
-            a web dev, building value by design
-          </div>
+          <div className="heading-desc">I create value by building web</div>
+          {/* <div className="heading-hobbies">
+            EAT &middot; PLAY &middot; CODE &middot; SLEEP &middot; REPEAT
+          </div> */}
         </div>
       </div>
       <div className="intro-image-container">

@@ -128,7 +128,7 @@ export const skills: ISkillsDict = {
     id: "golang",
     techName: "Go",
     description:
-      "Go is an open-source programming language which is popular for its simplicity, fast compile times, efficient memory management, and built-in concurrency support, making it a great choice for building high-performance and scalable applications.",
+      "Go is popular for its simplicity, fast compile times, efficient memory management, and built-in concurrency support, making it a great choice for building high-performance and scalable applications.",
     icon: GoLangIcon,
     projectsCount: 1,
     skillLevelPercentage: 10,
