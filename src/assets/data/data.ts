@@ -24,6 +24,8 @@ import CubeMusicImage from "../../assets/images/cubemusic.png";
 import CubeMusicLogo from "../../assets/images/cube-music-logo.png";
 import CubeChatImage from "../../assets/images/cubechat.png";
 import CubeChatLogo from "../../assets/images/cube-chat-logo.png";
+import TrackerLogo from "../../assets/images/tracker-logo.png";
+import TrackerImage from "../../assets/images/tracker-image.png";
 import CubekartGif from "../../assets/images/cubekart.gif";
 import CubeMusicGif from "../../assets/images/cubemusic.gif";
 import CubeChatGif from "../../assets/images/cubechat.gif";
@@ -326,6 +328,19 @@ export const projects: IProjectDict = {
     gif: CubeChatGif,
     techStack: ["reactjs", "nodejs", "expressjs", "mongodb", "websockets"],
   },
+
+  websitetracker: {
+    id: "website-tracker",
+    title: "Website tracker",
+    description:
+      "Website tracker is a tool designed to track and monitor the behavior and engagement of website users. It records and provides insights into the number of times a user has visited the website and the duration of time spent on the site during each visit.",
+    githubLink: "https://github.com/anudeep-mp/tracker-api",
+    projectLink: "",
+    image: TrackerImage,
+    logo: TrackerLogo,
+    gif: "",
+    techStack: ["golang", "mongodb", "reactjs", "typescript"],
+  },
 };
 
 export const defaultProjectKey = "cubekart";
@@ -358,7 +373,7 @@ export const contactLinks: IContactLink[] = [
     link: "https://t.me/i_anudeep",
     label: "Telegram",
     socialId: "@i_anudeep",
-  }
+  },
 ];
 
 export const socialLinks: ISocialLink[] = [

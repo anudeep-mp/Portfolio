@@ -62,20 +62,24 @@ export default function Projects() {
               ))}
             </div>
             <div className="project-links">
-              <a
-                href={selectedProject.projectLink}
-                target="_blank"
-                className="project-link"
-              >
-                Open website <img src={NavigateIcon} className="link-icon" />
-              </a>
-              <a
-                href={selectedProject.githubLink}
-                target="_blank"
-                className="project-link"
-              >
-                Github repo <img src={CodeIcon} className="link-icon" />
-              </a>
+              {selectedProject.projectLink && (
+                <a
+                  href={selectedProject.projectLink}
+                  target="_blank"
+                  className="project-link"
+                >
+                  Open website <img src={NavigateIcon} className="link-icon" />
+                </a>
+              )}
+              {selectedProject.githubLink && (
+                <a
+                  href={selectedProject.githubLink}
+                  target="_blank"
+                  className="project-link"
+                >
+                  Github repo <img src={CodeIcon} className="link-icon" />
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -90,11 +94,13 @@ export default function Projects() {
               src={!showGif ? selectedProject.image : selectedProject?.gif}
               className="project-image"
             />
-            <img
-              src={PlayIcon}
-              className="play-icon"
-              onClick={playSelectedProjectGIF}
-            />
+            {selectedProject?.gif && (
+              <img
+                src={PlayIcon}
+                className="play-icon"
+                onClick={playSelectedProjectGIF}
+              />
+            )}
           </div>
         </div>
       </div>
