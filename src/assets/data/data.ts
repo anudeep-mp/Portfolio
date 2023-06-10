@@ -8,6 +8,7 @@ import FluentUIIcon from "../../assets/images/fluent-ui.png";
 import BootStrapIcon from "../../assets/images/bootstrap.png";
 import TypeScriptIcon from "../../assets/images/typescript.png";
 import JavaScriptIcon from "../../assets/images/javascript.png";
+import DotNetIcon from "../../assets/images/dot-net.png";
 import NodeIcon from "../../assets/images/node.png";
 import ReactIcon from "../../assets/images/react.png";
 import ReduxIcon from "../../assets/images/redux.png";
@@ -21,6 +22,7 @@ import PythonIcon from "../../assets/images/python.png";
 import CubekartImage from "../../assets/images/cubekart.png";
 import CubekartLogo from "../../assets/images/cubekart-logo.png";
 import CubeMusicImage from "../../assets/images/cubemusic.png";
+import Pro4Image from "../../assets/images/pro4.png";
 import CubeMusicLogo from "../../assets/images/cube-music-logo.png";
 import CubeChatImage from "../../assets/images/cubechat.png";
 import CubeChatLogo from "../../assets/images/cube-chat-logo.png";
@@ -37,6 +39,7 @@ import InstagramIcon from "../../assets/images/instagram.png";
 import PhoneIcon from "../../assets/images/phone.png";
 import WhatsAppIcon from "../../assets/images/whatsapp.png";
 import TelegramIcon from "../../assets/images/telegram.png";
+
 
 import {
   ICareerItem,
@@ -132,11 +135,34 @@ export const skills: ISkillsDict = {
     description:
       "Go is popular for its simplicity, fast compile times, efficient memory management, and built-in concurrency support, making it a great choice for building high-performance and scalable applications.",
     icon: GoLangIcon,
-    projectsCount: 1,
-    skillLevelPercentage: 10,
+    projectsCount: 3,
+    skillLevelPercentage: 50,
     isActive: true,
     startDate: "03/2023",
     experienceType: "relative",
+  },
+  dotnet : {
+    id: "dotnet",
+    techName: ".NET",
+    description: "A framework used for building web applications, desktop applications, mobile applications, and web services.",
+    icon: DotNetIcon,
+    projectsCount: 1,
+    skillLevelPercentage: 50,
+    isActive: true,
+    startDate: "01/2023",
+    experienceType: "relative",
+  },
+  mongodb: {
+    id: "mongodb",
+    techName: "Mongo DB",
+    description:
+      "A popular NoSQL database used for storing and managing unstructured data, often used in web and mobile applications to provide flexible data storage.",
+    icon: MongoDBIcon,
+    projectsCount: 3,
+    skillLevelPercentage: 40,
+    isActive: true,
+    experienceType: "relative",
+    startDate: "08/2021",
   },
   html: {
     id: "html",
@@ -194,7 +220,7 @@ export const skills: ISkillsDict = {
     icon: BootStrapIcon,
     projectsCount: 3,
     skillLevelPercentage: 70,
-    isActive: true,
+    isActive: false,
     experienceType: "fixed",
     startDate: "08/2021",
     endDate: "12/2021",
@@ -236,18 +262,6 @@ export const skills: ISkillsDict = {
     experienceType: "fixed",
     startDate: "08/2021",
     endDate: "12/2021",
-  },
-  mongodb: {
-    id: "mongodb",
-    techName: "Mongo DB",
-    description:
-      "A popular NoSQL database used for storing and managing unstructured data, often used in web and mobile applications to provide flexible data storage.",
-    icon: MongoDBIcon,
-    projectsCount: 3,
-    skillLevelPercentage: 40,
-    isActive: true,
-    experienceType: "relative",
-    startDate: "08/2021",
   },
   websockets: {
     id: "websockets",
@@ -341,6 +355,17 @@ export const projects: IProjectDict = {
     gif: "",
     techStack: ["golang", "mongodb", "reactjs", "typescript"],
   },
+  pro4 :{
+    id: "pro4",
+    title: "Pro4",
+    description: "Pro4 is a versatile event registration website that simplifies the process of creating, managing, and promoting events. With customizable registration forms, secure payment collection, and convenient attendee engagement features, Pro4 streamlines event organization.",
+    githubLink: "",
+    projectLink: "",
+    image: Pro4Image,
+    logo: "",
+    gif: "",
+    techStack: ["golang", "mongodb", "reactjs", "typescript"],
+  }
 };
 
 export const defaultProjectKey = "cubekart";

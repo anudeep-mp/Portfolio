@@ -42,7 +42,7 @@ export default function Projects() {
                     key={project.id}
                     onClick={() => changeSelectedProject(projectKey)}
                   >
-                    <span className="title">{project.title}</span>
+                    <div className="title">{project.title}</div>
                     <img src={project.logo} className="logo" />
                   </li>
                 );
